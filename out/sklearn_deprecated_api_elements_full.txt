@@ -1,0 +1,253 @@
+sklearn._is_pairwise(): ~- if the `_pairwise` attribute and the tag are present and consistent, then use the value and not issue a warning. - if the `_pairwise` attribute and the tag are present and not consistent, use the `_pairwise` value and issue a deprecation warning. - if only the `_pairwise` attribute is present and it is not false, issue a deprecation warning and use the `_pairwise` value. warn - ignoreFutureWarning, ./sklearn/base.py
+sklearn._CalibratedClassifier: ~ .. deprecated:: 0.24 `calibrators_` is deprecated from 0.24 and will be removed in 1.1 (renaming of 0.26). use `calibrators` instead., ./sklearn/calibration.py
+sklearn._CalibratedClassifier.calibrators_(): @deprecated. # `calibrators_` is deprecated in 0.24 and will be removed in 1.1(renaming of 0.26). Use `calibrators` instead., ./sklearn/calibration.py
+sklearn.AffinityPropagation._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cluster/_affinity_propagation.py
+sklearn.Birch.fit_(): @deprecated. # `fit_` is deprecated in 1.0 and will be removed in 1.2., ./sklearn/cluster/_birch.py
+sklearn.Birch.partial_fit_(): @deprecated. # `partial_fit_` is deprecated in 1.0 and will be removed in 1.2., ./sklearn/cluster/_birch.py
+sklearn.MiniBatchKMeans: ~ .. deprecated:: 0.24 this attribute is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). .. deprecated:: 0.24 this attribute is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cluster/_kmeans.py
+sklearn.MiniBatchKMeans.counts_(): @deprecated. # The attribute `counts_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cluster/_kmeans.py
+sklearn.MiniBatchKMeans.init_size_(): @deprecated. # The attribute `init_size_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cluster/_kmeans.py
+sklearn.MiniBatchKMeans.random_state_(): @deprecated. # The attribute `random_state_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cluster/_kmeans.py
+sklearn.SpectralClustering._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cluster/_spectral.py
+sklearn.ColumnTransformer.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/compose/_column_transformer.py
+sklearn._DictWithDeprecatedKeys: ~dictionary with deprecated keys. currently only be used in graphicallassocv to deprecate keys, ./sklearn/covariance/_graph_lasso.py
+sklearn.GraphicalLassoCV: ~ .. deprecated:: 0.24 the `cv_alphas_` attribute is deprecated in version 0.24 in favor of `cv_results_['alphas']` and will be removed in version 1.1 (renaming of 0.26). .. deprecated:: 0.24 the `grid_scores_` attribute is deprecated in version 0.24 in favor of `cv_results_` and will be removed in version 1.1 (renaming of 0.26). .. deprecated:: 1.0 `split(k)_score` is deprecated in 1.0 and will be removed in 1.2. use `split(k)_test_score` instead. .. deprecated:: 1.0 `mean_score` is deprecated in 1.0 and will be removed in 1.2. use `mean_test_score` instead. .. deprecated:: 1.0 `std_score` is deprecated in 1.0 and will be removed in 1.2. use `std_test_score` instead., ./sklearn/covariance/_graph_lasso.py
+sklearn.GraphicalLassoCV.grid_scores_(): @deprecated. # The `grid_scores_` attribute is deprecated in version 0.24 in favor of `cv_results_` and will be removed in version 1.1 (renaming of 0.26)., ./sklearn/covariance/_graph_lasso.py
+sklearn.GraphicalLassoCV.cv_alphas_(): @deprecated. # The `cv_alphas_` attribute is deprecated in version 0.24 in favor of `cv_results_['alpha']` and will be removed in version 1.1 (renaming of 0.26)., ./sklearn/covariance/_graph_lasso.py
+sklearn.PLSCanonical: ~ .. deprecated:: 0.24 `x_scores_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). you can just call `transform` on the training data instead. .. deprecated:: 0.24 `y_scores_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). you can just call `transform` on the training data instead., ./sklearn/cross_decomposition/_pls.py
+sklearn.CCA: ~ .. deprecated:: 0.24 `x_scores_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). you can just call `transform` on the training data instead. .. deprecated:: 0.24 `y_scores_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). you can just call `transform` on the training data instead., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD: ~ .. deprecated:: 0.24 `x_scores_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). you can just call `transform` on the training data instead. .. deprecated:: 0.24 `y_scores_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). you can just call `transform` on the training data instead., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.norm_y_weights(): @deprecated. # Attribute `norm_y_weights` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.x_mean_(): @deprecated. # Attribute `x_mean_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.y_mean_(): @deprecated. # Attribute `y_mean_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.x_std_(): @deprecated. # Attribute `x_std_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.y_std_(): @deprecated. # Attribute `y_std_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.x_scores_(): ~attribute `x_scores_` was deprecated in version 0.24., ./sklearn/cross_decomposition/_pls.py
+sklearn._PLS.y_scores_(): ~attribute `y_scores_` was deprecated in version 0.24., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD.x_scores_(): @deprecated. # Attribute `x_scores_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26). Use est.transform(X) on the training data instead., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD.y_scores_(): @deprecated. # Attribute `y_scores_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26). Use est.transform(X, Y) on the training data instead., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD.x_mean_(): @deprecated. # Attribute `x_mean_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD.y_mean_(): @deprecated. # Attribute `y_mean_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD.x_std_(): @deprecated. # Attribute `x_std_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn.PLSSVD.y_std_(): @deprecated. # Attribute `y_std_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/cross_decomposition/_pls.py
+sklearn.load_boston(): ~.. deprecated:: 1.0 this function is deprecated in 1.0 and will be removed in 1.2. see the warning message below for further details regarding the alternative datasets., @deprecated. # `load_boston` is deprecated in 1.0 and will be removed in 1.2.
+
+    The Boston housing prices dataset has an ethical problem. You can refer to
+    the documentation of this function for further details.
+
+    The scikit-learn maintainers therefore strongly discourage the use of this
+    dataset unless the purpose of the code is to study and educate about
+    ethical issues in data science and machine learning.
+
+    In this special case, you can fetch the dataset from the original
+    source::
+
+        import pandas as pd
+        import numpy as np
+
+
+        data_url = "http://lib.stat.cmu.edu/datasets/boston"
+        raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
+        data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+        target = raw_df.values[1::2, 2]
+
+    Alternative datasets include the California housing dataset (i.e.
+    :func:`~sklearn.datasets.fetch_california_housing`) and the Ames housing
+    dataset. You can load the datasets as follows::
+
+        from sklearn.datasets import fetch_california_housing
+        housing = fetch_california_housing()
+
+    for the California housing dataset and::
+
+        from sklearn.datasets import fetch_openml
+        housing = fetch_openml(name="house_prices", as_frame=True)
+
+    for the Ames housing dataset.
+    , ./sklearn/datasets/_base.py
+sklearn.SparseCoder: ~ .. deprecated:: 0.24 this attribute is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). use `dictionary` instead., ./sklearn/decomposition/_dict_learning.py
+sklearn.SparseCoder.components_(): @deprecated. # The attribute `components_` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). Use the `dictionary` instead., ./sklearn/decomposition/_dict_learning.py
+sklearn.KernelPCA: ~lambdas_ : ndarray of shape (n_components,) same as `eigenvalues_` but this attribute is deprecated. .. deprecated:: 1.0 `lambdas_` was renamed to `eigenvalues_` in version 1.0 and will be removed in 1.2. alphas_ : ndarray of shape (n_samples, n_components) same as `eigenvectors_` but this attribute is deprecated. .. deprecated:: 1.0 `alphas_` was renamed to `eigenvectors_` in version 1.0 and will be removed in 1.2., ./sklearn/decomposition/_kernel_pca.py
+sklearn.KernelPCA._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/decomposition/_kernel_pca.py
+sklearn.KernelPCA.lambdas_(): @deprecated. # Attribute `lambdas_` was deprecated in version 1.0 and will be removed in 1.2. Use `eigenvalues_` instead., ./sklearn/decomposition/_kernel_pca.py
+sklearn.KernelPCA.alphas_(): @deprecated. # Attribute `alphas_` was deprecated in version 1.0 and will be removed in 1.2. Use `eigenvectors_` instead., ./sklearn/decomposition/_kernel_pca.py
+sklearn.LatentDirichletAllocation.perplexity(): ~.. versionchanged:: 0.19 *doc_topic_distr* argument has been deprecated and is ignored because user no longer has access to unnormalized distribution, ./sklearn/decomposition/_lda.py
+sklearn.NMF: ~ .. deprecated:: 1.0 the `alpha` parameter is deprecated in 1.0 and will be removed in 1.2. use `alpha_w` and `alpha_h` instead. .. deprecated:: 1.0 the `regularization` parameter is deprecated in 1.0 and will be removed in 1.2. use `alpha_w` and `alpha_h` instead., ./sklearn/decomposition/_nmf.py
+sklearn.non_negative_factorization(): ~ .. deprecated:: 1.0 the `alpha` parameter is deprecated in 1.0 and will be removed in 1.2. use `alpha_w` and `alpha_h` instead. .. deprecated:: 1.0 the `regularization` parameter is deprecated in 1.0 and will be removed in 1.2. use `alpha_w` and `alpha_h` instead., ./sklearn/decomposition/_nmf.py
+sklearn.DummyClassifier: ~ .. versionadded:: 0.24 .. deprecated:: 1.0 will be removed in 1.0, ./sklearn/dummy.py
+sklearn.DummyRegressor: ~ .. versionadded:: 0.24 .. deprecated:: 1.0 will be removed in 1.0, ./sklearn/dummy.py
+sklearn.DummyClassifier.n_features_in_(): @deprecated. # `n_features_in_` is deprecated in 1.0 and will be removed in 1.2., ./sklearn/dummy.py
+sklearn.DummyRegressor.n_features_in_(): @deprecated. # `n_features_in_` is deprecated in 1.0 and will be removed in 1.2., ./sklearn/dummy.py
+sklearn.BaggingClassifier: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_bagging.py
+sklearn.BaggingRegressor: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_bagging.py
+sklearn.BaseBagging.n_features_(): @deprecated. # Attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. Use `n_features_in_` instead., ./sklearn/ensemble/_bagging.py
+sklearn.RandomForestClassifier: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_forest.py
+sklearn.RandomForestRegressor: ~ .. deprecated:: 1.0 criterion "mse" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="squared_error"` which is equivalent. .. deprecated:: 1.0 criterion "mae" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="absolute_error"` which is equivalent. .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_forest.py
+sklearn.ExtraTreesClassifier: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_forest.py
+sklearn.ExtraTreesRegressor: ~ .. deprecated:: 1.0 criterion "mse" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="squared_error"` which is equivalent. .. deprecated:: 1.0 criterion "mae" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="absolute_error"` which is equivalent. .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_forest.py
+sklearn.RandomTreesEmbedding: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_forest.py
+sklearn._parallel_build_trees():  warn - ignoreDeprecationWarning, ./sklearn/ensemble/_forest.py
+sklearn.BaseForest.fit():  warn - Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.FutureWarning warn - Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.FutureWarning, ./sklearn/ensemble/_forest.py
+sklearn.BaseForest.n_features_(): @deprecated. # Attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. Use `n_features_in_` instead., ./sklearn/ensemble/_forest.py
+sklearn.GradientBoostingClassifier: ~ .. deprecated:: 0.24 `criterion='mae'` is deprecated and will be removed in version 1.1 (renaming of 0.26). use `criterion='friedman_mse'` or `'squared_error'` instead, as trees should use a squared error criterion in gradient boosting. .. deprecated:: 1.0 criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. use `criterion='squared_error'` which is equivalent. .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_gb.py
+sklearn.GradientBoostingRegressor: ~ .. deprecated:: 1.0 the loss 'ls' was deprecated in v1.0 and will be removed in version 1.2. use `loss='squared_error'` which is equivalent. .. deprecated:: 1.0 the loss 'lad' was deprecated in v1.0 and will be removed in version 1.2. use `loss='absolute_error'` which is equivalent. .. deprecated:: 0.24 `criterion='mae'` is deprecated and will be removed in version 1.1 (renaming of 0.26). the correct way of minimizing the absolute error is to use `loss='absolute_error'` instead. .. deprecated:: 1.0 criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. use `criterion='squared_error'` which is equivalent. .. deprecated:: 0.24 attribute ``n_classes_`` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26). .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_gb.py
+sklearn.BaseGradientBoosting.n_features_(): @deprecated. # Attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. Use `n_features_in_` instead., ./sklearn/ensemble/_gb.py
+sklearn.GradientBoostingRegressor.n_classes_(): @deprecated. # Attribute `n_classes_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/ensemble/_gb.py
+sklearn._hist_gradient_boosting.HistGradientBoostingRegressor: ~ .. deprecated:: 1.0 the loss 'least_squares' was deprecated in v1.0 and will be removed in version 1.2. use `loss='squared_error'` which is equivalent. .. deprecated:: 1.0 the loss 'least_absolute_deviation' was deprecated in v1.0 and will be removed in version 1.2. use `loss='absolute_error'` which is equivalent., ./sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
+sklearn.IsolationForest: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/ensemble/_iforest.py
+sklearn.VotingClassifier: ~ .. versionchanged:: 0.21 ``'drop'`` is accepted. using none was deprecated in 0.22 and support was removed in 0.24., ./sklearn/ensemble/_voting.py
+sklearn.VotingRegressor: ~ .. versionchanged:: 0.21 ``'drop'`` is accepted. using none was deprecated in 0.22 and support was removed in 0.24., ./sklearn/ensemble/_voting.py
+sklearn.CountVectorizer.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/feature_extraction/text.py
+sklearn.DictVectorizer.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/feature_extraction/_dict_vectorizer.py
+sklearn.FeatureHasher: ~ .. versionchanged:: 0.19 ``alternate_sign`` replaces the now deprecated ``non_negative`` parameter., ./sklearn/feature_extraction/_hash.py
+sklearn.RFECV: ~ .. deprecated:: 1.0 the `grid_scores_` attribute is deprecated in version 1.0 in favor of `cv_results_` and will be removed in version 1.2., ./sklearn/feature_selection/_rfe.py
+sklearn.RFECV.grid_scores_(): @deprecated. # The `grid_scores_` attribute is deprecated in version 1.0 in favor of `cv_results_` and will be removed in version 1.2., ./sklearn/feature_selection/_rfe.py
+sklearn.IterativeImputer: ~ this estimator is still **experimental** for now: the predictions and the api might change without any deprecation cycle. to use it, you need to explicitly import `enable_iterative_imputer`::, ./sklearn/impute/_iterative.py
+sklearn.partial_dependence(): ~ .. versionadded:: 0.24 .. deprecated:: 0.24 `kind='legacy'` is deprecated and will be removed in version 1.1. `kind='average'` will be the new default. it is intended to migrate from the ndarray output to :class:`~sklearn.utils.bunch` output., ./sklearn/inspection/_partial_dependence.py
+sklearn._plot.plot_partial_dependence(): ~.. deprecated:: 1.0 `plot_partial_dependence` is deprecated in 1.0 and will be removed in 1.2. please use the class method: :func:`~sklearn.metrics.partialdependencedisplay.from_estimator`., @deprecated. # Function `plot_partial_dependence` is deprecated in 1.0 and will be removed in 1.2. Use PartialDependenceDisplay.from_estimator instead, ./sklearn/inspection/_plot/partial_dependence.py
+sklearn._plot.PartialDependenceDisplay.plot(): @_deprecate_positional_args. # 1.1, ./sklearn/inspection/_plot/partial_dependence.py
+sklearn.KernelRidge._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/kernel_ridge.py
+sklearn.LinearRegression: ~ .. deprecated:: 1.0 `normalize` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_base.py
+sklearn._deprecate_normalize(): ~normalize is to be deprecated from linear models and a use of a pipeline with a standardscaler is to be recommended instead. here the appropriate message is selected to be displayed to the user depending on the default normalize value (as it varies between the linear models and normalize value selected by the user). estimator_name : str name of the linear estimator which calls this function. the name will be used for writing the deprecation warnings notes ----- this function should be updated in 1.2 depending on the value of `normalize`: - true, warning: `normalize` was deprecated in 1.2 and will be removed in 1.4. suggest to use pipeline instead. - false, `normalize` was deprecated in 1.2 and it will be removed in 1.4. leave normalize to its default value. - `deprecated` - this should only be possible with default == false as from 1.2 `normalize` in all the linear models should be either removed or the default should be set to false. this function should be completely removed in 1.4., ./sklearn/linear_model/_base.py
+sklearn.BayesianRidge: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_bayes.py
+sklearn.ARDRegression: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_bayes.py
+sklearn.ElasticNet: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.Lasso: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.LassoCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.ElasticNetCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.MultiTaskElasticNet: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.MultiTaskLasso: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.MultiTaskElasticNetCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.MultiTaskLassoCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn._alpha_grid(): ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_coordinate_descent.py
+sklearn.Lars: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_least_angle.py
+sklearn.LassoLars: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_least_angle.py
+sklearn.LarsCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_least_angle.py
+sklearn.LassoLarsCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_least_angle.py
+sklearn.LassoLarsIC: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_least_angle.py
+sklearn._lars_path_residues(): ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_least_angle.py
+sklearn.OrthogonalMatchingPursuit: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_omp.py
+sklearn.OrthogonalMatchingPursuitCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_omp.py
+sklearn._omp_path_residues(): ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0. it will default to false in 1.2 and be removed in 1.4., ./sklearn/linear_model/_omp.py
+sklearn.RANSACRegressor: ~ .. deprecated:: 1.0 not setting `min_samples` explicitly will raise an error in version 1.2 for models other than :class:`~sklearn.linear_model.linearregression`. to keep the old default behavior, set `min_samples=x.shape[1] + 1` explicitly. .. deprecated:: 1.0 the loss 'squared_loss' was deprecated in v1.0 and will be removed in version 1.2. use `loss='squared_error'` which is equivalent. .. deprecated:: 1.0 the loss 'absolute_loss' was deprecated in v1.0 and will be removed in version 1.2. use `loss='absolute_error'` which is equivalent., ./sklearn/linear_model/_ransac.py
+sklearn.Ridge: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_ridge.py
+sklearn.RidgeClassifier: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_ridge.py
+sklearn.RidgeCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_ridge.py
+sklearn.RidgeClassifierCV: ~ .. deprecated:: 1.0 ``normalize`` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/linear_model/_ridge.py
+sklearn.SGDClassifier: ~ .. deprecated:: 1.0 the loss 'squared_loss' was deprecated in v1.0 and will be removed in version 1.2. use `loss='squared_error'` which is equivalent., ./sklearn/linear_model/_stochastic_gradient.py
+sklearn.SGDRegressor: ~ .. deprecated:: 1.0 the loss 'squared_loss' was deprecated in v1.0 and will be removed in version 1.2. use `loss='squared_error'` which is equivalent., ./sklearn/linear_model/_stochastic_gradient.py
+sklearn.MDS._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/manifold/_mds.py
+sklearn.SpectralEmbedding._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/manifold/_spectral_embedding.py
+sklearn.TSNE: ~ .. versionadded:: 0.24 added to provide backward compatibility during deprecation of legacy squaring behavior. .. deprecated:: 0.24 legacy squaring behavior was deprecated in 0.24. the ``'legacy'`` value will be removed in 1.1 (renaming of 0.26), at which point the default value will change to ``true``., ./sklearn/manifold/_t_sne.py
+sklearn._plot.plot_confusion_matrix(): ~.. deprecated:: 1.0 `plot_confusion_matrix` is deprecated in 1.0 and will be removed in 1.2. use one of the following class methods: :func:`~sklearn.metrics.confusionmatrixdisplay.from_predictions` or :func:`~sklearn.metrics.confusionmatrixdisplay.from_estimator`., @deprecated. # Function `plot_confusion_matrix` is deprecated in 1.0 and will be removed in 1.2. Use one of the class methods: ConfusionMatrixDisplay.from_predictions or ConfusionMatrixDisplay.from_estimator., ./sklearn/metrics/_plot/confusion_matrix.py
+sklearn._plot.plot_det_curve(): ~.. deprecated:: 1.0 `plot_det_curve` is deprecated in 1.0 and will be removed in 1.2. use one of the following class methods: :func:`~sklearn.metrics.detcurvedisplay.from_predictions` or :func:`~sklearn.metrics.detcurvedisplay.from_estimator`., @deprecated. # Function plot_det_curve is deprecated in 1.0 and will be removed in 1.2. Use one of the class methods: DetCurveDisplay.from_predictions or DetCurveDisplay.from_estimator., ./sklearn/metrics/_plot/det_curve.py
+sklearn._plot.plot_precision_recall_curve(): ~.. deprecated:: 1.0 `plot_precision_recall_curve` is deprecated in 1.0 and will be removed in 1.2. use one of the following class methods: :func:`~sklearn.metrics.precisionrecalldisplay.from_predictions` or :func:`~sklearn.metrics.precisionrecalldisplay.from_estimator`., @deprecated. # Function `plot_precision_recall_curve` is deprecated in 1.0 and will be removed in 1.2. Use one of the class methods: PrecisionRecallDisplay.from_predictions or PrecisionRecallDisplay.from_estimator., ./sklearn/metrics/_plot/precision_recall_curve.py
+sklearn._plot.plot_roc_curve(): @deprecated. # Function :func:`plot_roc_curve` is deprecated in 1.0 and will be removed in 1.2. Use one of the class methods: :meth:`sklearn.metric.RocCurveDisplay.from_predictions` or :meth:`sklearn.metric.RocCurveDisplay.from_estimator`., ./sklearn/metrics/_plot/roc_curve.py
+sklearn.mean_absolute_percentage_error(): @_deprecate_positional_args. # 1.1, ./sklearn/metrics/_regression.py
+sklearn.BaseSearchCV._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/model_selection/_search.py
+sklearn.HalvingGridSearchCV: ~ this estimator is still **experimental** for now: the predictions and the api might change without any deprecation cycle. to use it, you need to explicitly import ``enable_halving_search_cv``::, ./sklearn/model_selection/_search_successive_halving.py
+sklearn.HalvingRandomSearchCV: ~ this estimator is still **experimental** for now: the predictions and the api might change without any deprecation cycle. to use it, you need to explicitly import ``enable_halving_search_cv``::, ./sklearn/model_selection/_search_successive_halving.py
+sklearn.OneVsRestClassifier: ~ .. deprecated:: 0.24 this attribute is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). if you use this attribute in :class:`~sklearn.feature_selection.rfe` or :class:`~sklearn.feature_selection.selectfrommodel`, you may pass a callable to the `importance_getter` parameter that extracts feature the importances from `estimators_`. .. deprecated:: 0.24 this attribute is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). if you use this attribute in :class:`~sklearn.feature_selection.rfe` or :class:`~sklearn.feature_selection.selectfrommodel`, you may pass a callable to the `importance_getter` parameter that extracts feature the importances from `estimators_`., ./sklearn/multiclass.py
+sklearn.OneVsOneClassifier: ~ .. deprecated:: 0.24 the _pairwise attribute is deprecated in 0.24. from 1.1 (renaming of 0.25) and onward, `pairwise_indices_` will use the pairwise estimator tag instead., ./sklearn/multiclass.py
+sklearn.OneVsRestClassifier.coef_(): @deprecated. # Attribute `coef_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26). If you observe this warning while using RFE or SelectFromModel, use the importance_getter parameter instead., ./sklearn/multiclass.py
+sklearn.OneVsRestClassifier.intercept_(): @deprecated. # Attribute `intercept_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26). If you observe this warning while using RFE or SelectFromModel, use the importance_getter parameter instead., ./sklearn/multiclass.py
+sklearn.OneVsRestClassifier._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/multiclass.py
+sklearn.OneVsOneClassifier._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/multiclass.py
+sklearn.GaussianNB: ~ .. deprecated:: 1.0 `sigma_` is deprecated in 1.0 and will be removed in 1.2. use `var_` instead., ./sklearn/naive_bayes.py
+sklearn.MultinomialNB: ~ .. deprecated:: 0.24 ``coef_`` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). .. deprecated:: 0.24 ``intercept_`` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/naive_bayes.py
+sklearn.ComplementNB: ~ .. deprecated:: 0.24 ``coef_`` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). .. deprecated:: 0.24 ``coef_`` is deprecated in 0.24 and will be removed in 1.1 (renaming of 0.26). .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/naive_bayes.py
+sklearn.BernoulliNB: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/naive_bayes.py
+sklearn.CategoricalNB: ~ .. deprecated:: 1.0 attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/naive_bayes.py
+sklearn.GaussianNB.sigma_(): @deprecated. # Attribute `sigma_` was deprecated in 1.0 and will be removed in1.2. Use `var_` instead., ./sklearn/naive_bayes.py
+sklearn._BaseDiscreteNB.coef_(): @deprecated. # Attribute `coef_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/naive_bayes.py
+sklearn._BaseDiscreteNB.intercept_(): @deprecated. # Attribute `intercept_` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/naive_bayes.py
+sklearn._BaseDiscreteNB.n_features_(): @deprecated. # Attribute `n_features_` was deprecated in version 1.0 and will be removed in 1.2. Use `n_features_in_` instead., ./sklearn/naive_bayes.py
+sklearn.NeighborsBase._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/neighbors/_base.py
+sklearn.RadiusNeighborsClassifier: ~ .. deprecated:: 1.0 the radiusneighborsclassifier class will not longer accept extra keyword parameters in 1.2 since they are unused., ./sklearn/neighbors/_classification.py
+sklearn.DistanceMetric._warn():  warn - sklearn.neighbors.DistanceMetric has been moved to sklearn.metrics.DistanceMetric in 1.0. This import path will be removed in 1.3FutureWarning, ./sklearn/neighbors/_distance_metric.py
+sklearn.NearestCentroid: ~ .. versionchanged:: 0.19 `metric='precomputed'` was deprecated and now raises an error, ./sklearn/neighbors/_nearest_centroid.py
+sklearn.KNeighborsRegressor._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/neighbors/_regression.py
+sklearn.FeatureUnion: ~ .. versionchanged:: 0.22 deprecated `none` as a transformer in favor of 'drop'., ./sklearn/pipeline.py
+sklearn.Pipeline._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/pipeline.py
+sklearn.FeatureUnion.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/pipeline.py
+sklearn.KernelCenterer._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1., ./sklearn/preprocessing/_data.py
+sklearn.OneHotEncoder.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/preprocessing/_encoders.py
+sklearn.PolynomialFeatures: ~ .. deprecated:: 1.0 this attribute is deprecated in 1.0 and will be removed in 1.2. refer to `n_features_in_` instead., ./sklearn/preprocessing/_polynomial.py
+sklearn.PolynomialFeatures.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/preprocessing/_polynomial.py
+sklearn.PolynomialFeatures.n_input_features_(): @deprecated. # The attribute `n_input_features_` was deprecated in version 1.0 and will be removed in 1.2., ./sklearn/preprocessing/_polynomial.py
+sklearn.SplineTransformer.get_feature_names(): @deprecated. # get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead., ./sklearn/preprocessing/_polynomial.py
+sklearn.BaseLibSVM._pairwise(): @deprecated. # Attribute `_pairwise` was deprecated in version 0.24 and will be removed in 1.1 (renaming of 0.26)., ./sklearn/svm/_base.py
+sklearn.SVC: ~ .. versionchanged:: 0.17 deprecated *decision_function_shape='ovo' and none*., ./sklearn/svm/_classes.py
+sklearn.NuSVC: ~ .. versionchanged:: 0.17 deprecated *decision_function_shape='ovo' and none*., ./sklearn/svm/_classes.py
+sklearn.OneClassSVM.fit(): ~ .. deprecated:: 1.0 the `fit` method will not longer accept extra keyword parameters in 1.2. these keyword parameters were already discarded., ./sklearn/svm/_classes.py
+sklearn.DecisionTreeClassifier: ~ .. deprecated:: 1.0 `n_features_` is deprecated in 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/tree/_classes.py
+sklearn.DecisionTreeRegressor: ~ .. deprecated:: 1.0 criterion "mse" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="squared_error"` which is equivalent. .. deprecated:: 1.0 criterion "mae" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="absolute_error"` which is equivalent. .. deprecated:: 1.0 `n_features_` is deprecated in 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/tree/_classes.py
+sklearn.ExtraTreeClassifier: ~ .. deprecated:: 1.0 `n_features_` is deprecated in 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/tree/_classes.py
+sklearn.ExtraTreeRegressor: ~ .. deprecated:: 1.0 criterion "mse" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="squared_error"` which is equivalent. .. deprecated:: 1.0 criterion "mae" was deprecated in v1.0 and will be removed in version 1.2. use `criterion="absolute_error"` which is equivalent. .. deprecated:: 1.0 `n_features_` is deprecated in 1.0 and will be removed in 1.2. use `n_features_in_` instead., ./sklearn/tree/_classes.py
+sklearn.DecisionTreeClassifier.fit(): ~x_idx_sorted : deprecated, default="deprecated" this parameter is deprecated and has no effect. it will be removed in 1.1 (renaming of 0.26). .. deprecated:: 0.24, ./sklearn/tree/_classes.py
+sklearn.DecisionTreeClassifier.n_features_(): @deprecated. # The attribute `n_features_` is deprecated in 1.0 and will be removed in 1.2. Use `n_features_in_` instead., ./sklearn/tree/_classes.py
+sklearn.DecisionTreeRegressor.fit(): ~x_idx_sorted : deprecated, default="deprecated" this parameter is deprecated and has no effect. it will be removed in 1.1 (renaming of 0.26). .. deprecated:: 0.24, ./sklearn/tree/_classes.py
+sklearn.DecisionTreeRegressor.n_features_(): @deprecated. # The attribute `n_features_` is deprecated in 1.0 and will be removed in 1.2. Use `n_features_in_` instead., ./sklearn/tree/_classes.py
+sklearn.deprecated: ~decorator to mark a function or class as deprecated. the optional extra argument will be appended to the deprecation message and the docstring. note: to use this with the default value for extra, put in an empty of parentheses: >>> from sklearn.utils import deprecated >>> deprecated() <sklearn.utils.deprecation.deprecated object at ...> >>> @deprecated() ... def some_function(): pass parameters ---------- extra : str, default='' to be added to the deprecation messages., ./sklearn/utils/deprecation.py
+sklearn._is_deprecated(): ~helper to check if func is wrapped by our deprecated decorator, ./sklearn/utils/deprecation.py
+sklearn.deprecated._decorate_class():  warn - FutureWarning, ./sklearn/utils/deprecation.py
+sklearn.deprecated.wrapped():  warn - FutureWarning, ./sklearn/utils/deprecation.py
+sklearn.deprecated._decorate_fun():  warn - FutureWarning, ./sklearn/utils/deprecation.py
+sklearn.deprecated._decorate_property():  warn - FutureWarning, ./sklearn/utils/deprecation.py
+sklearn.check_supervised_y_no_nan():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.parametrize_with_checks(): ~ .. versionchanged:: 0.24 passing a class was deprecated in version 0.23, and support for classes was removed in 0.24. pass an instance instead., ./sklearn/utils/estimator_checks.py
+sklearn.check_estimator(): ~ .. versionchanged:: 0.24 passing a class was deprecated in version 0.23, and support for classes was removed in 0.24., ./sklearn/utils/estimator_checks.py
+sklearn.check_estimator_sparse_data():  warn - FutureWarning warn - FutureWarning warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_sample_weights_pandas_series():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_sample_weights_not_an_array():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_sample_weights_list():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_sample_weights_shape():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_sample_weights_invariance():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_dont_overwrite_parameters():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_fit2d_predict1d():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_methods_subset_invariance():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_methods_sample_order_invariance():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_transformer_general():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_transformer_data_not_an_array():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_transformers_unfitted():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_estimators_empty_data_messages():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_estimators_nan_inf():  warn - FutureWarning warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_estimators_partial_fit_n_features():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifier_multioutput():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_regressor_multioutput():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_clustering():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_clusterer_compute_labels_predict():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifiers_one_label():  warn - FutureWarning warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifiers_multilabel_representation_invariance():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifiers_multilabel_output_format_predict():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifiers_multilabel_output_format_predict_proba():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifiers_multilabel_output_format_decision_function():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_estimators_fit_returns_self():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_supervised_y_2d():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_regressors_int():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_regressors_train():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_class_weight_classifiers():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_class_weight_balanced_classifiers():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_class_weight_balanced_linear_classifier():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_estimators_overwrite_params():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_no_attributes_set_in_init():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_sparsify_coefficients():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifier_data_not_an_array():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_regressor_data_not_an_array():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_estimators_data_not_an_array():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_parameters_default_constructible():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_non_transformer_estimators_n_iter():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_transformer_n_iter():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_get_params_invariance():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_set_params():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_classifiers_regression_target():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_decision_proba_consistency():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_n_features_in_after_fitting():  warn - FutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.check_dataframe_column_names_consistency():  warn - errorsklearnFutureWarning warn - errorsklearnFutureWarning, ./sklearn/utils/estimator_checks.py
+sklearn.randomized_svd(): ~ .. versionchanged:: 1.2 the previous behavior (`random_state=0`) is deprecated, and from v1.2 the default value will be `random_state=none`. set the value of `random_state` explicitly to suppress the deprecation warning., ./sklearn/utils/extmath.py
+sklearn.graph_shortest_path(): @deprecated. # `graph_shortest_path` is deprecated in 1.0 (renaming of 0.25) and will be removed in 1.2. Use `scipy.sparse.csgraph.shortest_path` instead., ./sklearn/utils/graph.py
+sklearn._safe_split(): ~.. deprecated:: 0.24 the _pairwise attribute is deprecated in 0.24. from 1.1 (renaming of 0.26) and onward, this function will check for the pairwise estimator tag., ./sklearn/utils/metaestimators.py
+sklearn.assert_warns(): ~.. deprecated:: 1.0 `assert_warns` is deprecated in 1.0 and will be removed in 1.2. use `pytest.warns` instead., @deprecated. # `assert_warns` is deprecated in 1.0 and will be removed in 1.2.Use `pytest.warns` instead., ./sklearn/utils/_testing.py
+sklearn.assert_warns_message(): ~.. deprecated:: 1.0 `assert_warns_message` is deprecated in 1.0 and will be removed in 1.2. use `pytest.warns` instead., @deprecated. # `assert_warns_message` is deprecated in 1.0 and will be removed in 1.2.Use `pytest.warns` instead., ./sklearn/utils/_testing.py
+sklearn._safe_indexing(): ~ this utility is documented, but **private**. this means that backward compatibility might be broken without any deprecation cycle., ./sklearn/utils/__init__.py
+sklearn.all_estimators():  warn - FutureWarning, ./sklearn/utils/__init__.py

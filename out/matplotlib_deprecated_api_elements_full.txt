@@ -1,0 +1,138 @@
+matplotlib.MovieWriter.cleanup(): @_api.deprecated # 3.4, ./matplotlib/animation.py
+matplotlib.Axes.plot_date(): ~ this method exists for historic reasons and will be deprecated in the future., ./matplotlib/axes/_axes.py
+matplotlib.Axes.stem(): ~use_line_collection : bool, default: true if ``true``, store and plot the stem lines as a `~.collections.linecollection` instead of individual lines, which significantly increases performance. if ``false``, defaults to the old behavior of using a list of `.line2d` objects. this parameter may be deprecated in the future., ./matplotlib/axes/_axes.py
+matplotlib.Axes.imshow(): @_api.make_keyword_only # aspect, ./matplotlib/axes/_axes.py
+matplotlib.Axes.pcolor(): ~ - 'flat': a solid color is used for each quad. the color of the quad (i, j), (i+1, j), (i, j+1), (i+1, j+1) is given by ``c[i, j]``. the dimensions of *x* and *y* should be one greater than those of *c*; if they are the same as *c*, then a deprecation warning is raised, and the last row and column of *c* are dropped. - 'nearest': each grid point will have a color centered on it, extending halfway between the adjacent grid centers. the dimensions of *x* and *y* must be the same as *c*. - 'auto': choose 'flat' if dimensions of *x* and *y* are one larger than *c*. choose 'nearest' if dimensions are the same., ./matplotlib/axes/_axes.py
+matplotlib.Axes.pcolormesh(): ~ - 'flat': a solid color is used for each quad. the color of the quad (i, j), (i+1, j), (i, j+1), (i+1, j+1) is given by ``c[i, j]``. the dimensions of *x* and *y* should be one greater than those of *c*; if they are the same as *c*, then a deprecation warning is raised, and the last row and column of *c* are dropped. - 'nearest': each grid point will have a color centered on it, extending halfway between the adjacent grid centers. the dimensions of *x* and *y* must be the same as *c*. - 'gouraud': each quad will be gouraud shaded: the color of the corners (i', j') are given by ``c[i', j']``. the color values of the area in between is interpolated from the corner values. the dimensions of *x* and *y* must be the same as *c*. when gouraud shading is used, *edgecolors* is ignored. - 'auto': choose 'flat' if dimensions of *x* and *y* are one larger than *c*. choose 'nearest' if dimensions are the same., ./matplotlib/axes/_axes.py
+matplotlib._AxesBase: ~parameters ---------- axes : .axes.axes the axes from which this sublist will pull the children artists. prop_name : str the property name used to access this sublist from the axes; used to generate deprecation warnings. add_name : str the method name used to add artists of this sublist's type to the axes; used to generate deprecation warnings. valid_types : list of type, optional a list of types that determine which children will be returned by this sublist. if specified, then the artists in the sublist must be instances of any of these types. if unspecified, then any type of artist is valid (unless limited by *invalid_types*.) invalid_types : tuple, optional a list of types that determine which children will *not* be returned by this sublist. if specified, then artists in the sublist will never be an instance of these types. otherwise, no types will be excluded., ./matplotlib/axes/_base.py
+matplotlib._AxesBase._deprecate_noninstance(): ~for each *key, value* pair in *kwargs*, check that *value* is an instance of one of *_types*; if not, raise an appropriate deprecation., ./matplotlib/axes/_base.py
+matplotlib._AxesBase.grid(): @_api.rename_parameter # visible, ./matplotlib/axes/_base.py
+matplotlib.ArtistList: ~parameters ---------- axes : .axes.axes the axes from which this sublist will pull the children artists. prop_name : str the property name used to access this sublist from the axes; used to generate deprecation warnings. add_name : str the method name used to add artists of this sublist's type to the axes; used to generate deprecation warnings. valid_types : list of type, optional a list of types that determine which children will be returned by this sublist. if specified, then the artists in the sublist must be instances of any of these types. if unspecified, then any type of artist is valid (unless limited by *invalid_types*.) invalid_types : tuple, optional a list of types that determine which children will *not* be returned by this sublist. if specified, then artists in the sublist will never be an instance of these types. otherwise, no types will be excluded., ./matplotlib/axes/_base.py
+matplotlib.SubplotBase.get_geometry(): @_api.deprecated # (get_subplotspec returns a SubplotSpec instance.), ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.change_geometry(): @_api.deprecated # set_subplotspec, ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.figbox(): @_api.deprecated # get_position(), ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.numRows(): @_api.deprecated # get_gridspec().nrows, ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.numCols(): @_api.deprecated # get_gridspec().ncols, ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.update_params(): @_api.deprecated # 3.4, ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.is_first_row(): @_api.deprecated # ax.get_subplotspec().is_first_row(), ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.is_last_row(): @_api.deprecated # ax.get_subplotspec().is_last_row(), ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.is_first_col(): @_api.deprecated # ax.get_subplotspec().is_first_col(), ./matplotlib/axes/_subplots.py
+matplotlib.SubplotBase.is_last_col(): @_api.deprecated # ax.get_subplotspec().is_last_col(), ./matplotlib/axes/_subplots.py
+matplotlib.Tick.apply_tickdir(): @_api.deprecated # axis.set_tick_params, ./matplotlib/axis.py
+matplotlib.Axis.cla(): @_api.deprecated # Axis.clear(), ./matplotlib/axis.py
+matplotlib.Axis.grid(): @_api.rename_parameter # visible, ./matplotlib/axis.py
+matplotlib.RendererAgg.get_content_extents(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_agg.py
+matplotlib.RendererAgg.tostring_rgba_minimized(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_agg.py
+matplotlib.FigureCanvasAgg.print_raw(): @_api.delete_parameter # args, ./matplotlib/backends/backend_agg.py
+matplotlib.FigureCanvasAgg.print_png(): @_api.delete_parameter # args, ./matplotlib/backends/backend_agg.py
+matplotlib.FigureCanvasAgg.print_jpg(): @_api.delete_parameter # args, ./matplotlib/backends/backend_agg.py
+matplotlib.__getattr__.cursord(): @_api.deprecated # , ./matplotlib/backends/backend_gtk3.py
+matplotlib.RendererPdf.mathtext_parser(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_pdf.py
+matplotlib.FigureCanvasPdf.print_pdf(): @_api.delete_parameter # dpi, ./matplotlib/backends/backend_pdf.py
+matplotlib.TmpDirCleaner.remaining_tmpdirs(): @_api.classproperty, @_api.deprecated # 3.4, ./matplotlib/backends/backend_pgf.py
+matplotlib.TmpDirCleaner.add(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_pgf.py
+matplotlib.TmpDirCleaner.cleanup_remaining_tmpdirs(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_pgf.py
+matplotlib.FigureCanvasPS.print_ps(): @_api.delete_parameter # args, ./matplotlib/backends/backend_ps.py
+matplotlib.FigureCanvasPS.print_eps(): @_api.delete_parameter # args, ./matplotlib/backends/backend_ps.py
+matplotlib.FigureCanvasPS._print_ps(): @_api.delete_parameter # dpi, ./matplotlib/backends/backend_ps.py
+matplotlib.RendererSVG.mathtext_parser(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_svg.py
+matplotlib.FigureCanvasSVG.print_svg(): @_api.delete_parameter # dpi, @_api.delete_parameter # args, ./matplotlib/backends/backend_svg.py
+matplotlib.FigureCanvasSVG.print_svgz(): @_api.delete_parameter # args, ./matplotlib/backends/backend_svg.py
+matplotlib.FigureCanvasTemplate.print_foo(): @_api.delete_parameter # args, ./matplotlib/backends/backend_template.py
+matplotlib._FigureCanvasWxBase.gui_repaint(): @_api.delete_parameter # origin, ./matplotlib/backends/backend_wx.py
+matplotlib.NavigationToolbar2Wx.get_canvas(): @_api.deprecated # 3.4, ./matplotlib/backends/backend_wx.py
+matplotlib.FigureCanvasTk: @_api.delete_parameter # get_tk_widget().bind('<Configure>', ..., True), ./matplotlib/backends/_backend_tk.py
+matplotlib.TimerBase.remove_callback(): ~*args* and *kwargs* are optional and used to distinguish between copies of the same function registered to be called with different arguments. this behavior is deprecated. in the future, ``*args, **kwargs`` won't be considered anymore; to keep a specific callback removable by itself, pass it to `add_callback` as a `functools.partial` object., ./matplotlib/backend_bases.py
+matplotlib.FigureCanvasBase.supports_blit(): @_api.classproperty, ./matplotlib/backend_bases.py
+matplotlib.FigureCanvasBase.get_window_title(): @_api.deprecated # manager.get_window_title or GUI-specific methods, ./matplotlib/backend_bases.py
+matplotlib.FigureCanvasBase.set_window_title(): @_api.deprecated # manager.set_window_title or GUI-specific methods, ./matplotlib/backend_bases.py
+matplotlib.FigureManagerBase.key_press(): @_api.deprecated # self.canvas.callbacks.process(event.name, event), ./matplotlib/backend_bases.py
+matplotlib.FigureManagerBase.button_press(): @_api.deprecated # self.canvas.callbacks.process(event.name, event), ./matplotlib/backend_bases.py
+matplotlib.NavigationToolbar2.set_cursor(): @_api.deprecated # canvas.set_cursor, ./matplotlib/backend_bases.py
+matplotlib.SetCursorBase.set_cursor(): @_api.deprecated # figure.canvas.set_cursor, ./matplotlib/backend_tools.py
+matplotlib.deprecated(): @_api.deprecated # 3.4, ./matplotlib/cbook/__init__.py
+matplotlib.warn_deprecated(): @_api.deprecated # 3.4, ./matplotlib/cbook/__init__.py
+matplotlib.report_memory(): @_api.deprecated # psutil.virtual_memory, ./matplotlib/cbook/__init__.py
+matplotlib.CallbackRegistry.connect(): @_api.rename_parameter # signal, ./matplotlib/cbook/__init__.py
+matplotlib._DeprecatedCmapDictWrapper: ~dictionary mapping for deprecated _cmap_d access., ./matplotlib/cm.py
+matplotlib.register_cmap(): ~notes ----- registering a colormap stores a reference to the colormap object which can currently be modified and inadvertently change the global colormap state. this behavior is deprecated and in matplotlib 3.5 the registered colormap will be immutable., ./matplotlib/cm.py
+matplotlib.QuadMesh: ~there exists a deprecated api version ``quadmesh(m, n, coords)``, where the dimensions are given explicitly and ``coords`` is a (m*n, 2) array-like. this has been deprecated in matplotlib 3.5. the following describes the semantics of this deprecated api., ./matplotlib/collections.py
+matplotlib.QuadMesh.convert_mesh_to_paths(): @_api.deprecated # QuadMesh(coordinates).get_paths(), ./matplotlib/collections.py
+matplotlib.QuadMesh.convert_mesh_to_triangles(): @_api.deprecated # 3.5, ./matplotlib/collections.py
+matplotlib.colorbar_factory(): @_api.deprecated # Colorbar, ./matplotlib/colorbar.py
+matplotlib.Colorbar.set_ticks(): @_api.delete_parameter # update_ticks, ./matplotlib/colorbar.py
+matplotlib.Colorbar.set_ticklabels(): ~update_ticks : bool, default: true this keyword argument is ignored and will be be removed. deprecated, @_api.delete_parameter # update_ticks, ./matplotlib/colorbar.py
+matplotlib.ContourLabeler.get_label_coords(): @_api.deprecated # 3.4, ./matplotlib/contour.py
+matplotlib.ContourLabeler.get_label_width(): @_api.deprecated # 3.5, ./matplotlib/contour.py
+matplotlib.epoch2num(): @_api.deprecated # mdates.date2num(datetime.utcfromtimestamp(e)), ./matplotlib/dates.py
+matplotlib.num2epoch(): @_api.deprecated # mdates.num2date(e).timestamp(), ./matplotlib/dates.py
+matplotlib.MicrosecondLocator.set_view_interval(): @_api.deprecated # .axis.set_view_interval, ./matplotlib/dates.py
+matplotlib.MicrosecondLocator.set_data_interval(): @_api.deprecated # .axis.set_data_interval, ./matplotlib/dates.py
+matplotlib.find_tex_file(): ~parameters ---------- filename : str or path-like format : str or bytes used as the value of the ``--format`` option to :program:`kpsewhich`. could be e.g. 'tfm' or 'vf' to limit the search to that type of files. deprecated., @_api.delete_parameter # format, ./matplotlib/dviread.py
+matplotlib.win32InstalledFonts(): @_api.deprecated # 3.5, ./matplotlib/font_manager.py
+matplotlib.get_fontconfig_fonts(): @_api.deprecated # 3.5, ./matplotlib/font_manager.py
+matplotlib.SubplotSpec.get_position(): @_api.delete_parameter # return_all, ./matplotlib/gridspec.py
+matplotlib.imread(): ~ passing a url is deprecated. please open the url for reading and pass the result to pillow, e.g. with ``np.array(pil.image.open(urllib.request.urlopen(url)))``. format : str, optional the image file format assumed for reading the data. the image is loaded as a png file if *format* is set to "png", if *fname* is a path or opened file with a ".png" extension, or if it is an url. in all other cases, *format* is ignored and the format is auto-detected by `pil.image.open`., ./matplotlib/image.py
+matplotlib.HandlerLine2DCompound: ~original handler for `.line2d` instances, that relies on combining a line-only with a marker-only artist. may be deprecated in the future., ./matplotlib/legend_handler.py
+matplotlib.Line2D.validCap(): @_api.deprecated # 3.4, @_api.classproperty, ./matplotlib/lines.py
+matplotlib.Line2D.validJoin(): @_api.deprecated # 3.4, @_api.classproperty, ./matplotlib/lines.py
+matplotlib.MarkerStyle.set_fillstyle(): @_api.deprecated # a new marker, ./matplotlib/markers.py
+matplotlib.MarkerStyle.set_marker(): @_api.deprecated # a new marker, ./matplotlib/markers.py
+matplotlib.ship(): @_api.deprecated # 3.4, ./matplotlib/mathtext.py
+matplotlib.MathTextParser.to_mask(): @_api.deprecated # mathtext.math_to_image, ./matplotlib/mathtext.py
+matplotlib.MathTextParser.to_rgba(): @_api.deprecated # mathtext.math_to_image, ./matplotlib/mathtext.py
+matplotlib.MathTextParser.to_png(): @_api.deprecated # mathtext.math_to_image, ./matplotlib/mathtext.py
+matplotlib.MathTextParser.get_depth(): @_api.deprecated # mathtext.math_to_image, ./matplotlib/mathtext.py
+matplotlib.TextArea: @_api.delete_parameter # minimumdescent, ./matplotlib/offsetbox.py
+matplotlib.TextArea.set_minimumdescent(): @_api.deprecated # 3.4, ./matplotlib/offsetbox.py
+matplotlib.TextArea.get_minimumdescent(): @_api.deprecated # 3.4, ./matplotlib/offsetbox.py
+matplotlib.Patch.validCap(): @_api.deprecated # 3.4, @_api.classproperty, ./matplotlib/patches.py
+matplotlib.Patch.validJoin(): @_api.deprecated # 3.4, @_api.classproperty, ./matplotlib/patches.py
+matplotlib.BoxStyle.transmute(): @_api.deprecated # 3.4, ./matplotlib/patches.py
+matplotlib.BoxStyle.call_wrapper(): @_api.delete_parameter # mutation_aspect, ./matplotlib/patches.py
+matplotlib._Base.call_wrapper(): @_api.delete_parameter # mutation_aspect, ./matplotlib/patches.py
+matplotlib.FancyBboxPatch: @_api.delete_parameter # boxstyle, ./matplotlib/patches.py
+matplotlib.FancyArrowPatch: ~dpi_cor : float, default: 1 dpi_cor is currently used for linewidth-related things and shrink factor. mutation scale is affected by this. deprecated., @_api.delete_parameter # dpi_cor, ./matplotlib/patches.py
+matplotlib.FancyArrowPatch.set_dpi_cor(): @_api.deprecated # 3.4, ./matplotlib/patches.py
+matplotlib.FancyArrowPatch.get_dpi_cor(): @_api.deprecated # 3.4, ./matplotlib/patches.py
+matplotlib.ConnectionPatch: @_api.delete_parameter # dpi_cor, ./matplotlib/patches.py
+matplotlib.ThetaAxis.cla(): @_api.deprecated # ThetaAxis.clear(), ./matplotlib/projections/polar.py
+matplotlib.RadialAxis.cla(): @_api.deprecated # RadialAxis.clear(), ./matplotlib/projections/polar.py
+matplotlib.PolarAxes.set_ylim(): ~ymin, ymax : float, optional these arguments are deprecated and will be removed in a future version. they are equivalent to *bottom* and *top* respectively, and it is an error to pass both *ymin* and *bottom* or *ymax* and *top*., ./matplotlib/projections/polar.py
+matplotlib.axes(): ~notes ----- if the figure already has a axes with key (*args*, *kwargs*) then it will simply make that axes current and return it. this behavior is deprecated. meanwhile, if you do not want this behavior (i.e., you want to force the creation of a new axes), you must use a unique set of args and kwargs. the axes *label* attribute has been exposed for this purpose: if you want two axes that are otherwise identical to be added to the figure, make sure you give them unique labels., ./matplotlib/pyplot.py
+matplotlib.unescape_doctest(): @_api.deprecated # doctest.script_from_examples, ./matplotlib/sphinxext/plot_directive.py
+matplotlib.split_code_at_show(): @_api.deprecated # 3.5, ./matplotlib/sphinxext/plot_directive.py
+matplotlib.run_code(): @_api.deprecated # 3.5, ./matplotlib/sphinxext/plot_directive.py
+matplotlib.Spine.cla(): @_api.deprecated # Spine.clear(), ./matplotlib/spines.py
+matplotlib.get_integrator(): @_api.deprecated # 3.5, ./matplotlib/streamplot.py
+matplotlib.load_base_library(): @_api.deprecated # 3.5, ./matplotlib/style/core.py
+matplotlib.iter_user_libraries(): @_api.deprecated # 3.5, ./matplotlib/style/core.py
+matplotlib.mpl_image_comparison_parameters(): @_api.deprecated # none, ./matplotlib/testing/conftest.py
+matplotlib.Text.get_prop_tup(): @_api.deprecated # 3.5, ./matplotlib/text.py
+matplotlib.TickHelper.set_view_interval(): @_api.deprecated # .axis.set_view_interval, ./matplotlib/ticker.py
+matplotlib.TickHelper.set_data_interval(): @_api.deprecated # .axis.set_data_interval, ./matplotlib/ticker.py
+matplotlib.TickHelper.set_bounds(): @_api.deprecated # .axis.set_view_interval and .axis.set_data_interval, ./matplotlib/ticker.py
+matplotlib.auto_adjust_subplotpars(): @_api.deprecated # 3.5, ./matplotlib/tight_layout.py
+matplotlib.Bbox: ~ the current behavior of `bbox.null()` may be surprising as it does not have all of the properties of the "empty set", and as such does not behave like a "zero" object in the mathematical sense. we may change that in the future (with a deprecation period)., ./matplotlib/transforms.py
+matplotlib.ConversionInterface.is_numlike(): @_api.deprecated # 3.5, ./matplotlib/units.py
+matplotlib.SpanSelector: ~span_stays : bool, default: false if true, the span stays visible after the mouse is released. deprecated, use *interactive* instead., @_api.rename_parameter # props, @_api.rename_parameter # interactive, ./matplotlib/widgets.py
+matplotlib.RectangleSelector: @_api.rename_parameter # grab_range, @_api.rename_parameter # handle_props, @_api.rename_parameter # props, @_api.delete_parameter # drawtype, @_api.delete_parameter # lineprops, ./matplotlib/widgets.py
+matplotlib.LassoSelector: @_api.rename_parameter # props, ./matplotlib/widgets.py
+matplotlib.LassoSelector.onpress(): @_api.deprecated # press, ./matplotlib/widgets.py
+matplotlib.LassoSelector.onrelease(): @_api.deprecated # release, ./matplotlib/widgets.py
+matplotlib.PolygonSelector: @_api.rename_parameter # props, @_api.rename_parameter # handle_props, @_api.rename_parameter # grab_range, ./matplotlib/widgets.py
+matplotlib.MatplotlibDeprecationWarning: ~a class for issuing deprecation warnings for matplotlib users., ./matplotlib/_api/deprecation.py
+matplotlib.deprecate_privatize_attribute: ~helper to deprecate public access to an attribute (or method). class foo: attr = _deprecate_privatize_attribute(*args, **kwargs) where *all* parameters are forwarded to `deprecated`. this form makes ``attr`` a property which forwards read and write access to ``self._attr`` (same name but with a leading underscore), with a deprecation warning. note that the attribute name is derived from *the name this helper is assigned to*. this helper also works for deprecating methods., ./matplotlib/_api/deprecation.py
+matplotlib.warn_deprecated(): ~display a standardized deprecation. parameters ---------- since : str the release at which this api became deprecated. message : str, optional override the default deprecation message. the ``%(since)s``, ``%(name)s``, ``%(alternative)s``, ``%(obj_type)s``, ``%(addendum)s``, and ``%(removal)s`` format specifiers will be replaced by the values of the respective arguments passed to this function. name : str, optional the name of the deprecated object. alternative : str, optional an alternative api that the user may use in place of the deprecated api. the deprecation warning will tell the user about this alternative if provided. pending : bool, optional if true, uses a pendingdeprecationwarning instead of a deprecationwarning. cannot be used together with *removal*. obj_type : str, optional the object type being deprecated. addendum : str, optional additional text appended directly to the final message. removal : str, optional the expected removal version. with the default (an empty string), a removal version is automatically computed from *since*. set to other falsy values to not schedule a removal date. cannot be used together with *pending*. # to warn of the deprecation of "matplotlib.name_of_module" warn_deprecated('1.4.0', name='matplotlib.name_of_module', obj_type='module') warn - MatplotlibDeprecationWarning, ./matplotlib/_api/deprecation.py
+matplotlib.deprecated(): ~decorator to mark a function, a class, or a property as deprecated. when deprecating a classmethod, a staticmethod, or a property, the ``@deprecated`` decorator should go *under* ``@classmethod`` and ``@staticmethod`` (i.e., `deprecated` should directly decorate the underlying callable), but *over* ``@property``. when deprecating a class ``c`` intended to be used as a base class in a multiple inheritance hierarchy, ``c`` *must* define an ``__init__`` method (if ``c`` instead inherited its ``__init__`` from its own base class, then ``@deprecated`` would mess up ``__init__`` inheritance when installing its own (deprecation-emitting) ``c.__init__``). parameters are the same as for `warn_deprecated`, except that *obj_type* defaults to 'class' if decorating a class, 'attribute' if decorating a property, and 'function' otherwise. @deprecated('1.4.0') def the_function_to_deprecate(): pass, ./matplotlib/_api/deprecation.py
+matplotlib.rename_parameter(): ~the actual implementation of *func* should use *new*, not *old*. if *old* is passed to *func*, a deprecationwarning is emitted, and its value is used, even if *new* is also passed by keyword (this is to simplify pyplot wrapper functions, which always pass *new* explicitly to the axes method). if *new* is also passed but positionally, a typeerror will be raised by the underlying function during argument binding., ./matplotlib/_api/deprecation.py
+matplotlib.delete_parameter(): ~decorator indicating that parameter *name* of *func* is being deprecated. parameters that come after the deprecated parameter effectively become keyword-only (as they cannot be passed positionally without triggering the deprecationwarning on the deprecated parameter), and should be marked as such after the deprecation period has passed and the deprecated parameter is removed. parameters other than *since*, *name*, and *func* are keyword-only and forwarded to `.warn_deprecated`., ./matplotlib/_api/deprecation.py
+matplotlib.make_keyword_only(): ~decorator indicating that passing parameter *name* (or any of the following ones) positionally to *func* is being deprecated., ./matplotlib/_api/deprecation.py
+matplotlib.deprecate_method_override(): ~return ``obj.method`` with a deprecation if it was overridden, else none. parameters ---------- method an unbound method, i.e. an expression of the form ``class.method_name``. remember that within the body of a method, one can always use ``__class__`` to refer to the class that is currently being defined. obj either an object of the class where *method* is defined, or a subclass of that class. allow_empty : bool, default: false whether to allow overrides by "empty" methods without emitting a warning. **kwargs additional parameters passed to `warn_deprecated` to generate the deprecation warning; must at least include the "since" key., ./matplotlib/_api/deprecation.py
+matplotlib.caching_module_getattr(): ~the ``__getattr__`` class will be replaced by a ``__getattr__`` function such that trying to access ``name`` on the module will resolve the corresponding property (which may be decorated e.g. with ``_api.deprecated`` for deprecating module globals). the properties are all implicitly cached. moreover, a suitable attributeerror is generated and raised if no property with the given name exists., ./matplotlib/_api/__init__.py
+matplotlib.select_matching_signature(): ~ def my_func(*args, **kwargs): params = select_matching_signature( [lambda old1, old2: locals(), lambda new: locals()], *args, **kwargs) if "old1" in params: warn_deprecated(...) old1, old2 = params.values() # note that locals() is ordered. else: new, = params.values() # do things with params, ./matplotlib/_api/__init__.py
+matplotlib.Fonts.destroy(): @_api.deprecated # 3.4, ./matplotlib/_mathtext.py
+matplotlib.Fonts.render_glyph(): @_api.rename_parameter # font, ./matplotlib/_mathtext.py
+matplotlib.TruetypeFonts.destroy(): @_api.deprecated # 3.4, ./matplotlib/_mathtext.py
+matplotlib.is_url(): @_api.deprecated # 3.5, ./matplotlib/__init__.py
+matplotlib.test(): @_api.deprecated # pytest, ./matplotlib/__init__.py

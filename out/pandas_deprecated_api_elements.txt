@@ -1,0 +1,145 @@
+set_categories(): ~ .. deprecated:: 1.3.0 warn - The `inplace` parameter in pandas.Categorical.set_categories is deprecated and will be removed in a future version. Removing unused categories will always return a new Categorical object.FutureWarning
+rename_categories(): ~ .. deprecated:: 1.3.0
+reorder_categories(): ~ .. deprecated:: 1.3.0
+add_categories(): ~ .. deprecated:: 1.3.0
+remove_categories(): ~ .. deprecated:: 1.3.0
+remove_unused_categories(): ~ .. deprecated:: 1.2.0
+min(): @deprecate_kwarg. # skipna
+max(): @deprecate_kwarg. # skipna
+_addsub_object_array():  warn - ignoreFutureWarning
+maybe_convert_dtype(): ~convert data based on dtype conventions, issuing deprecation warnings or errors where appropriate.
+weekofyear(): ~.. deprecated:: 1.1.0 weekofyear and week have been deprecated. please use datetimeindex.isocalendar().week instead.
+SparseArray: ~ .. deprecated:: 1.4.0 use a function like `np.full` to construct an array with the desired repeats of the scalar value instead.
+cast_scalar_indexer(): ~to avoid numpy deprecationwarnings, cast float to integer where valid. parameters ---------- val : scalar warn_float : bool, default false if true, issue deprecation warning for a float indexer.
+eval(): ~ .. deprecated:: 1.0.0
+create_series_with_explicit_dtype(): ~this silences a deprecationwarning described in github-17261.
+maybe_unbox_datetimelike_tz_deprecation(): ~wrap maybe_unbox_datetimelike with a check for a timezone-aware timestamp along with a timezone-naive datetime64 dtype, which is deprecated.
+is_extension_type(): ~.. deprecated:: 1.0.0 use ``is_extension_array_dtype`` instead.
+to_stata(): @deprecate_kwarg. # path
+to_feather(): @deprecate_kwarg. # path
+to_parquet(): @deprecate_kwarg. # path
+lookup(): ~.. deprecated:: 1.2.0 dataframe.lookup is deprecated, use dataframe.melt and dataframe.loc instead. for further details see :ref:`looking up values by index/column labels <indexing.lookup>`.
+set_axis(): @deprecate_nonkeyword_arguments. # labels
+drop(): @deprecate_nonkeyword_arguments. # labels
+fillna(): @deprecate_nonkeyword_arguments. # value
+set_index(): @deprecate_nonkeyword_arguments. # keys
+reset_index(): @deprecate_nonkeyword_arguments. # level
+dropna(): @deprecate_nonkeyword_arguments. # self
+drop_duplicates(): @deprecate_nonkeyword_arguments. # subset
+sort_values(): @deprecate_nonkeyword_arguments. # by
+sort_index(): @deprecate_nonkeyword_arguments. # self
+append(): ~.. deprecated:: 1.4.0 use :func:`concat` instead. for further details see :ref:`whatsnew_140.deprecations.frame_series_append`
+_AXIS_NUMBERS(): ~.. deprecated:: 1.1.0
+_AXIS_NAMES(): ~.. deprecated:: 1.1.0
+ffill(): @deprecate_nonkeyword_arguments. # self
+bfill(): @deprecate_nonkeyword_arguments. # self
+clip(): @deprecate_nonkeyword_arguments. # upper
+interpolate(): @deprecate_nonkeyword_arguments. # method
+where(): @deprecate_nonkeyword_arguments. # other
+mask(): @deprecate_nonkeyword_arguments. # other
+_AXIS_NUMBERS(): ~.. deprecated:: 1.1.0
+_AXIS_NAMES(): ~.. deprecated:: 1.1.0
+rename_axis(): ~the second calling convention will modify the names of the corresponding index if mapper is a list or a scalar. however, if mapper is dict-like or a function, it will use the deprecated behavior of modifying the axis *labels*.
+to_excel(): ~ .. deprecated:: 1.2.0
+take(): ~parameters ---------- indices : array-like an array of ints indicating which positions to take. axis : {0 or 'index', 1 or 'columns', none}, default 0 the axis on which to select elements. ``0`` means that we are selecting rows, ``1`` means that we are selecting columns. is_copy : bool before pandas 1.0, ``is_copy=false`` can be specified to ensure that the return value is an actual copy. starting with pandas 1.0, ``take`` always returns a copy, and the keyword is therefore deprecated. .. deprecated:: 1.0.0 **kwargs for compatibility with :meth:`numpy.take`. has no effect on the output.
+astype(): ~notes ----- .. deprecated:: 1.3.0 using ``astype`` to convert from timezone-naive dtype to timezone-aware dtype is deprecated and will raise in a future version. use :meth:`series.dt.tz_localize` instead.
+between_time(): ~ .. deprecated:: 1.4.0 arguments `include_start` and `include_end` have been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. include_end : bool, default true whether the end time needs to be included in the result. .. deprecated:: 1.4.0 arguments `include_start` and `include_end` have been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. inclusive : {"both", "neither", "left", "right"}, default "both" include boundaries; whether to set each bound as closed or open. axis : {0 or 'index', 1 or 'columns'}, default 0 determine range time on index or columns value.
+resample(): ~ .. deprecated:: 1.1.0 you should add the loffset to the `df.index` after the resample. see below. .. deprecated:: 1.1.0 the new arguments that you should use are 'offset' or 'origin'. to replace the use of the deprecated `base` argument, you can now use `offset`, in this example it is equivalent to have `base=2`: to replace the use of the deprecated `loffset` argument:
+where(): ~ .. deprecated:: 1.3.0 manually cast back if necessary.
+slice_shift(): ~.. deprecated:: 1.2.0 slice_shift is deprecated, use dataframe/series.shift instead.
+tshift(): ~.. deprecated:: 1.1.0 use `shift` instead.
+Grouper: ~ .. deprecated:: 1.1.0 the new arguments that you should use are 'offset' or 'origin'. .. deprecated:: 1.1.0 loffset is only working for ``.resample(...)`` and not for grouper (:issue:`28302`). however, loffset is also deprecated for ``.resample(...)`` see: :class:`dataframe.resample` to replace the use of the deprecated `base` argument, you can now use `offset`, in this example it is equivalent to have `base=2`:
+_check_deprecated_resample_kwargs(): ~check for use of deprecated parameters in ``resample`` and related functions. parameters ---------- kwargs : dict dictionary of keyword arguments to check for deprecated parameters. origin : object from where this function is being called; either grouper or timegrouper. used to determine an approximate stacklevel.
+deprecate_ndim_indexing(): ~helper function to raise the deprecation warning for multi-dimensional indexing on 1d series/index. gh#27125 indexer like idx[:, none] expands dim, but we cannot do that and keep an index, so we currently return ndarray, which is deprecated (deprecation gh#30588).
+unpack_1tuple(): ~notes ----- the list case is deprecated.
+weekofyear(): ~.. deprecated:: 1.1.0 series.dt.weekofyear and series.dt.week have been deprecated. please use series.dt.isocalendar().week instead.
+Index: ~see also -------- rangeindex : index implementing a monotonic integer range. categoricalindex : index of :class:`categorical` s. multiindex : a multi-level, or hierarchical index. intervalindex : an index of :class:`interval` s. datetimeindex : index of datetime64 data. timedeltaindex : index of timedelta64 data. periodindex : index of period data. numericindex : index of numpy int/uint/float data. int64index : index of purely int64 labels (deprecated). uint64index : index of purely uint64 labels (deprecated). float64index : index of purely float64 labels (deprecated).
+_maybe_cast_data_without_dtype(): ~parameters ---------- subarr : np.ndarray[object] cast_numeric_deprecated : bool, default true whether to issue a futurewarning when inferring numeric dtypes.
+copy(): ~ .. deprecated:: 1.2.0 use ``astype`` method instead. names : list-like, optional kept for compatibility with multiindex. should not be used. .. deprecated:: 1.4.0 use ``name`` instead.
+to_native_types(): ~.. deprecated:: 1.2.0
+set_names(): @deprecate_nonkeyword_arguments. # names
+drop_duplicates(): @deprecate_nonkeyword_arguments. # self
+set_value(): ~.. deprecated:: 1.0
+slice_indexer(): ~ .. deprecated:: 1.4.0
+_maybe_cast_slice_bound(): ~ .. deprecated:: 1.3.0
+get_slice_bound(): ~ .. deprecated:: 1.4.0
+slice_locs(): ~ .. deprecated:: 1.4.0
+date_range(): ~ .. deprecated:: 1.4.0 argument `closed` has been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. inclusive : {"both", "neither", "left", "right"}, default "both" include boundaries; whether to set each bound as closed or open.
+bdate_range(): ~ .. deprecated:: 1.4.0 argument `closed` has been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. inclusive : {"both", "neither", "left", "right"}, default "both" include boundaries; whether to set each bound as closed or open.
+set_levels(): ~ .. deprecated:: 1.2.0 verify_integrity : bool, default true if true, checks that levels and codes are compatible., @deprecate_nonkeyword_arguments. # levels
+set_codes(): ~ .. deprecated:: 1.2.0 verify_integrity : bool, default true if true, checks that levels and codes are compatible., @deprecate_nonkeyword_arguments. # codes
+copy(): ~ .. deprecated:: 1.2.0 levels : sequence, optional .. deprecated:: 1.2.0 codes : sequence, optional .. deprecated:: 1.2.0 deep : bool, default false name : label kept for compatibility with 1-dimensional index. should not be used.
+get_slice_bound(): ~ .. deprecated:: 1.4.0
+slice_locs(): ~ .. deprecated:: 1.4.0
+set_names(): @deprecate_nonkeyword_arguments. # names
+drop_duplicates(): @deprecate_nonkeyword_arguments. # self
+NumericIndex: ~see also -------- index : the base pandas index type. int64index : index of purely int64 labels (deprecated). uint64index : index of purely uint64 labels (deprecated). float64index : index of purely float64 labels (deprecated).
+_start(): ~ .. deprecated:: 0.25.0 use ``start`` instead.
+_stop(): ~ .. deprecated:: 0.25.0 use ``stop`` instead.
+_step(): ~ .. deprecated:: 0.25.0 use ``step`` instead.
+check_deprecated_indexers(): ~checks if the key is a deprecated indexer.
+interpolate(): @deprecate_nonkeyword_arguments. # method
+concat(): @deprecate_nonkeyword_arguments. # objs
+lreshape(): ~ .. deprecated:: 1.0.0
+reset_index(): @deprecate_nonkeyword_arguments. # level
+drop_duplicates(): @deprecate_nonkeyword_arguments. # self
+append(): ~.. deprecated:: 1.4.0 use :func:`concat` instead. for further details see :ref:`whatsnew_140.deprecations.frame_series_append`
+sort_values(): @deprecate_nonkeyword_arguments. # self
+sort_index(): @deprecate_nonkeyword_arguments. # self
+set_axis(): @deprecate_nonkeyword_arguments. # labels
+drop(): @deprecate_nonkeyword_arguments. # labels
+fillna(): @deprecate_nonkeyword_arguments. # value
+dropna(): @deprecate_nonkeyword_arguments. # self
+ffill(): @deprecate_nonkeyword_arguments. # self
+bfill(): @deprecate_nonkeyword_arguments. # self
+clip(): @deprecate_nonkeyword_arguments. # upper
+interpolate(): @deprecate_nonkeyword_arguments. # method
+where(): @deprecate_nonkeyword_arguments. # other
+mask(): @deprecate_nonkeyword_arguments. # other
+lexsort_indexer():  warn - ignore.*SparseArray.*FutureWarning
+capitalize(): @_doc_args. # capitalize
+to_timedelta(): ~ .. deprecated:: 1.2 strings with units 'm', 'y' and 'y' do not represent unambiguous timedelta values and will be removed in a future version
+ExponentialMovingWindow: ~ .. deprecated:: 1.4.0 if str, the name of the column in the dataframe representing the times.
+Expanding: ~ .. deprecated:: 1.1.0
+parse_date_time(): ~.. deprecated:: 1.2
+parse_date_fields(): ~.. deprecated:: 1.2
+parse_all_fields(): ~.. deprecated:: 1.2
+generic_parser(): ~.. deprecated:: 1.2
+ExcelWriter: ~ .. deprecated:: 1.2.0 .. deprecated:: 1.3.0
+read_excel(): @deprecate_nonkeyword_arguments. # sheet_name
+combine_kwargs(): ~use of kwargs is deprecated, this function is solely for use in 1.3 and should be removed in 1.4/2.0. also _base.excelwriter.__new__ ensures either engine_kwargs or kwargs must be none or empty respectively. parameters ---------- engine_kwargs: dict kwargs to be passed through to the engine. kwargs: dict kwargs to be psased through to the engine (deprecated)
+write(): ~ .. deprecated:: 1.2.0
+render(): ~.. deprecated:: 1.4.0 notes ----- this method is deprecated in favour of ``styler.to_html``.
+where(): ~.. deprecated:: 1.3.0 notes ----- this method is deprecated.
+set_precision(): ~.. deprecated:: 1.3.0 notes ----- this method is deprecated see `styler.format`.
+set_na_rep(): ~.. deprecated:: 1.3.0 notes ----- this method is deprecated. see `styler.format()`
+hide_index(): ~.. deprecated:: 1.4.0 this method should be replaced by ``hide(axis="index", **kwargs)``
+hide_columns(): ~..deprecated:: 1.4.0 this method should be replaced by ``hide(axis="columns", **kwargs)``
+read_html(): @deprecate_nonkeyword_arguments. # 2.0
+read_json(): ~ .. deprecated:: 1.0.0, @deprecate_nonkeyword_arguments. # path_or_buf
+read_csv(): @deprecate_nonkeyword_arguments. # filepath_or_buffer
+read_table(): @deprecate_nonkeyword_arguments. # filepath_or_buffer
+read_fwf(): @deprecate_nonkeyword_arguments. # filepath_or_buffer
+_validate_format(): ~validate / deprecate formats
+_gt14(): ~check if sqlalchemy.__version__ is at least 1.4.0, when several deprecations were made.
+read_xml(): @deprecate_nonkeyword_arguments. # path_or_buffer
+get_offset(): ~.. deprecated:: 1.0.0
+deprecate(): ~return a new function that emits a deprecation warning on use. to use this method for a deprecated function, another function `alternative` with the same signature must exist. the deprecated function will emit a deprecation warning, and in the docstring it will contain the deprecation directive with the provided version so it can be detected for future removal. parameters ---------- name : str name of function to deprecate. alternative : func function to use instead. version : str version of pandas in which the method has been deprecated. alt_name : str, optional name to use in preference of alternative.__name__. klass : warning, default futurewarning stacklevel : int, default 2 msg : str the message to display in the warning. default is '{name} is deprecated. use {alt_name} instead.'
+deprecate_kwarg(): ~decorator to deprecate a keyword argument of a function. parameters ---------- old_arg_name : str name of argument in function to deprecate new_arg_name : str or none name of preferred argument in function. use none to raise warning that ``old_arg_name`` keyword is deprecated. mapping : dict or callable if mapping is present, use it to translate old arguments to new arguments. a callable must do its own value checking; values not found in a dict will be forwarded unchanged. examples -------- the following deprecates 'cols', using 'columns' instead >>> @deprecate_kwarg(old_arg_name='cols', new_arg_name='columns') ... def f(columns=''): ... print(columns) ... >>> f(columns='should work ok') should work ok >>> f(cols='should raise warning') # doctest: +skip futurewarning: cols is deprecated, use columns instead warnings.warn(msg, futurewarning) should raise warning >>> @deprecate_kwarg('old', 'new', {'yes': true, 'no': false}) ... def f(new=false): ... print('yes!' if new else 'no!') ... >>> f(old='yes') # doctest: +skip futurewarning: old='yes' is deprecated, use new=true instead warnings.warn(msg, futurewarning) yes! >>> @deprecate_kwarg(old_arg_name='cols', new_arg_name=none) ... def f(cols='', another_param=''): ... print(cols) ... >>> f(cols='should raise warning') # doctest: +skip futurewarning: the 'cols' keyword is deprecated and will be removed in a future version please takes steps to stop use of 'cols' should raise warning >>> f(another_param='should not raise warning') # doctest: +skip should not raise warning >>> f(cols='should raise warning', another_param='') # doctest: +skip futurewarning: the 'cols' keyword is deprecated and will be removed in a future version please takes steps to stop use of 'cols' should raise warning
+_format_argument_list(): ~convert the allow_args argument (either string or integer) of `deprecate_nonkeyword_arguments` function to a string describing it to be inserted into warning message. parameters ---------- allowed_args : list, tuple or int the `allowed_args` argument for `deprecate_nonkeyword_arguments`, but none value is not allowed.
+future_version_msg(): ~specify which version of pandas the deprecation will take place in.
+deprecate_nonkeyword_arguments(): ~decorator to deprecate a use of non-keyword arguments of a function.
+safe_import():  warn - ignoreaiohttp.*decorator is deprecated since Python 3.8.*DeprecationWarning warn - ignorefastparquet.*Int64Index.*FutureWarning
+deprecate_option(): ~mark option `key` as deprecated, if code attempts to access this option, a warning will be produced, using `msg` if given, or a default message if not. if `rkey` is given, any access to the key will be re-routed to `rkey`. neither the existence of `key` nor that if `rkey` is checked. if they do not exist, any subsequence access will fail as usual, after the deprecation warning is given. parameters ---------- key : str name of the option to be deprecated. must be a fully-qualified option name (e.g "x.y.z.rkey"). msg : str, optional warning message to output when the key is referenced. if no message is given a default message will be emitted. rkey : str, optional name of an option to reroute access to. if specified, any referenced `key` will be re-routed to `rkey` including set/get/reset. rkey must be a fully-qualified option name (e.g "x.y.z.rkey"). used by the default message if no `msg` is specified. removal_ver : str, optional specifies the version in which this option will be removed. used by the default message if no `msg` is specified. raises ------ optionerror if the specified key has already been deprecated.
+_is_deprecated(): ~returns true if the given option has been deprecated
+_get_deprecated_option(): ~retrieves the metadata for a deprecated option, if `key` is deprecated. returns ------- deprecatedoption (namedtuple) if key is deprecated, none otherwise
+_get_registered_option(): ~returns ------- registeredoption (namedtuple) if key is deprecated, none otherwise
+_translate_key(): ~if key id deprecated and a replacement key defined, will return the replacement key, otherwise returns `key` as - is
+_warn_if_deprecated(): ~checks if `key` is a deprecated option and if so, prints a warning. returns ------- bool - true if `key` is deprecated, false otherwise.
+assert_almost_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. rtol : float, default 1e-5 relative tolerance.
+_get_tol_from_less_precise(): ~return the tolerance equivalent to the deprecated `check_less_precise` parameter.
+assert_index_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_exact : bool, default true whether to compare number exactly. check_categorical : bool, default true whether to compare internal categorical exactly. check_order : bool, default true whether to compare the order of index entries as well as their values. if true, both indexes must contain the same elements, in the same order. if false, both indexes must contain the same elements, but in any order.
+assert_extension_array_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_exact : bool, default false whether to compare number exactly. rtol : float, default 1e-5 relative tolerance. only used when check_exact is false.
+assert_series_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_names : bool, default true whether to check the series and index names attribute. check_exact : bool, default false whether to compare number exactly. check_datetimelike_compat : bool, default false compare datetime-like which is comparable ignoring dtype. check_categorical : bool, default true whether to compare internal categorical exactly. check_category_order : bool, default true whether to compare category order of internal categoricals.
+assert_frame_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_names : bool, default true whether to check that the `names` attribute for both the `index` and `column` attributes of the dataframe is identical. by_blocks : bool, default false specify how to compare internal data. if false, compare by columns. if true, compare by blocks. check_exact : bool, default false whether to compare number exactly. check_datetimelike_compat : bool, default false compare datetime-like which is comparable ignoring dtype. check_categorical : bool, default true whether to compare internal categorical exactly. check_like : bool, default false if true, ignore the order of index & columns. note: index labels must match their respective rows (same as in columns) - same labels must be with the same data. check_freq : bool, default true whether to check the `freq` attribute on a datetimeindex or timedeltaindex.
+_assert_caught_expected_warning():  warn - DeprecationWarning

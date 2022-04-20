@@ -1,0 +1,145 @@
+pandas.arrays.Categorical.set_categories(): ~ .. deprecated:: 1.3.0 warn - The `inplace` parameter in pandas.Categorical.set_categories is deprecated and will be removed in a future version. Removing unused categories will always return a new Categorical object.FutureWarning, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.rename_categories(): ~ .. deprecated:: 1.3.0, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.reorder_categories(): ~ .. deprecated:: 1.3.0, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.add_categories(): ~ .. deprecated:: 1.3.0, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.remove_categories(): ~ .. deprecated:: 1.3.0, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.remove_unused_categories(): ~ .. deprecated:: 1.2.0, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.min(): @deprecate_kwarg. # skipna, ./pandas/core/arrays/categorical.py
+pandas.arrays.Categorical.max(): @deprecate_kwarg. # skipna, ./pandas/core/arrays/categorical.py
+pandas.arrays.DatetimeLikeArrayMixin._addsub_object_array():  warn - ignoreFutureWarning, ./pandas/core/arrays/datetimelike.py
+pandas.arrays.maybe_convert_dtype(): ~convert data based on dtype conventions, issuing deprecation warnings or errors where appropriate., ./pandas/core/arrays/datetimes.py
+pandas.arrays.DatetimeArray.weekofyear(): ~.. deprecated:: 1.1.0 weekofyear and week have been deprecated. please use datetimeindex.isocalendar().week instead., ./pandas/core/arrays/datetimes.py
+pandas.arrays.sparse.SparseArray: ~ .. deprecated:: 1.4.0 use a function like `np.full` to construct an array with the desired repeats of the scalar value instead., ./pandas/core/arrays/sparse/array.py
+pandas.cast_scalar_indexer(): ~to avoid numpy deprecationwarnings, cast float to integer where valid. parameters ---------- val : scalar warn_float : bool, default false if true, issue deprecation warning for a float indexer., ./pandas/core/common.py
+pandas.computation.eval(): ~ .. deprecated:: 1.0.0, ./pandas/core/computation/eval.py
+pandas.create_series_with_explicit_dtype(): ~this silences a deprecationwarning described in github-17261., ./pandas/core/construction.py
+pandas.dtypes.maybe_unbox_datetimelike_tz_deprecation(): ~wrap maybe_unbox_datetimelike with a check for a timezone-aware timestamp along with a timezone-naive datetime64 dtype, which is deprecated., ./pandas/core/dtypes/cast.py
+pandas.dtypes.is_extension_type(): ~.. deprecated:: 1.0.0 use ``is_extension_array_dtype`` instead., ./pandas/core/dtypes/common.py
+pandas.DataFrame.to_stata(): @deprecate_kwarg. # path, ./pandas/core/frame.py
+pandas.DataFrame.to_feather(): @deprecate_kwarg. # path, ./pandas/core/frame.py
+pandas.DataFrame.to_parquet(): @deprecate_kwarg. # path, ./pandas/core/frame.py
+pandas.DataFrame.lookup(): ~.. deprecated:: 1.2.0 dataframe.lookup is deprecated, use dataframe.melt and dataframe.loc instead. for further details see :ref:`looking up values by index/column labels <indexing.lookup>`., ./pandas/core/frame.py
+pandas.DataFrame.set_axis(): @deprecate_nonkeyword_arguments. # labels, ./pandas/core/frame.py
+pandas.DataFrame.drop(): @deprecate_nonkeyword_arguments. # labels, ./pandas/core/frame.py
+pandas.DataFrame.fillna(): @deprecate_nonkeyword_arguments. # value, ./pandas/core/frame.py
+pandas.DataFrame.set_index(): @deprecate_nonkeyword_arguments. # keys, ./pandas/core/frame.py
+pandas.DataFrame.reset_index(): @deprecate_nonkeyword_arguments. # level, ./pandas/core/frame.py
+pandas.DataFrame.dropna(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/frame.py
+pandas.DataFrame.drop_duplicates(): @deprecate_nonkeyword_arguments. # subset, ./pandas/core/frame.py
+pandas.DataFrame.sort_values(): @deprecate_nonkeyword_arguments. # by, ./pandas/core/frame.py
+pandas.DataFrame.sort_index(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/frame.py
+pandas.DataFrame.append(): ~.. deprecated:: 1.4.0 use :func:`concat` instead. for further details see :ref:`whatsnew_140.deprecations.frame_series_append`, ./pandas/core/frame.py
+pandas.DataFrame._AXIS_NUMBERS(): ~.. deprecated:: 1.1.0, ./pandas/core/frame.py
+pandas.DataFrame._AXIS_NAMES(): ~.. deprecated:: 1.1.0, ./pandas/core/frame.py
+pandas.DataFrame.ffill(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/frame.py
+pandas.DataFrame.bfill(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/frame.py
+pandas.DataFrame.clip(): @deprecate_nonkeyword_arguments. # upper, ./pandas/core/frame.py
+pandas.DataFrame.interpolate(): @deprecate_nonkeyword_arguments. # method, ./pandas/core/frame.py
+pandas.DataFrame.where(): @deprecate_nonkeyword_arguments. # other, ./pandas/core/frame.py
+pandas.DataFrame.mask(): @deprecate_nonkeyword_arguments. # other, ./pandas/core/frame.py
+pandas.NDFrame._AXIS_NUMBERS(): ~.. deprecated:: 1.1.0, ./pandas/core/generic.py
+pandas.NDFrame._AXIS_NAMES(): ~.. deprecated:: 1.1.0, ./pandas/core/generic.py
+pandas.NDFrame.rename_axis(): ~the second calling convention will modify the names of the corresponding index if mapper is a list or a scalar. however, if mapper is dict-like or a function, it will use the deprecated behavior of modifying the axis *labels*., ./pandas/core/generic.py
+pandas.NDFrame.to_excel(): ~ .. deprecated:: 1.2.0, ./pandas/core/generic.py
+pandas.NDFrame.take(): ~parameters ---------- indices : array-like an array of ints indicating which positions to take. axis : {0 or 'index', 1 or 'columns', none}, default 0 the axis on which to select elements. ``0`` means that we are selecting rows, ``1`` means that we are selecting columns. is_copy : bool before pandas 1.0, ``is_copy=false`` can be specified to ensure that the return value is an actual copy. starting with pandas 1.0, ``take`` always returns a copy, and the keyword is therefore deprecated. .. deprecated:: 1.0.0 **kwargs for compatibility with :meth:`numpy.take`. has no effect on the output., ./pandas/core/generic.py
+pandas.NDFrame.astype(): ~notes ----- .. deprecated:: 1.3.0 using ``astype`` to convert from timezone-naive dtype to timezone-aware dtype is deprecated and will raise in a future version. use :meth:`series.dt.tz_localize` instead., ./pandas/core/generic.py
+pandas.NDFrame.between_time(): ~ .. deprecated:: 1.4.0 arguments `include_start` and `include_end` have been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. include_end : bool, default true whether the end time needs to be included in the result. .. deprecated:: 1.4.0 arguments `include_start` and `include_end` have been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. inclusive : {"both", "neither", "left", "right"}, default "both" include boundaries; whether to set each bound as closed or open. axis : {0 or 'index', 1 or 'columns'}, default 0 determine range time on index or columns value., ./pandas/core/generic.py
+pandas.NDFrame.resample(): ~ .. deprecated:: 1.1.0 you should add the loffset to the `df.index` after the resample. see below. .. deprecated:: 1.1.0 the new arguments that you should use are 'offset' or 'origin'. to replace the use of the deprecated `base` argument, you can now use `offset`, in this example it is equivalent to have `base=2`: to replace the use of the deprecated `loffset` argument:, ./pandas/core/generic.py
+pandas.NDFrame.where(): ~ .. deprecated:: 1.3.0 manually cast back if necessary., ./pandas/core/generic.py
+pandas.NDFrame.slice_shift(): ~.. deprecated:: 1.2.0 slice_shift is deprecated, use dataframe/series.shift instead., ./pandas/core/generic.py
+pandas.NDFrame.tshift(): ~.. deprecated:: 1.1.0 use `shift` instead., ./pandas/core/generic.py
+pandas.groupby.Grouper: ~ .. deprecated:: 1.1.0 the new arguments that you should use are 'offset' or 'origin'. .. deprecated:: 1.1.0 loffset is only working for ``.resample(...)`` and not for grouper (:issue:`28302`). however, loffset is also deprecated for ``.resample(...)`` see: :class:`dataframe.resample` to replace the use of the deprecated `base` argument, you can now use `offset`, in this example it is equivalent to have `base=2`:, ./pandas/core/groupby/grouper.py
+pandas.groupby._check_deprecated_resample_kwargs(): ~check for use of deprecated parameters in ``resample`` and related functions. parameters ---------- kwargs : dict dictionary of keyword arguments to check for deprecated parameters. origin : object from where this function is being called; either grouper or timegrouper. used to determine an approximate stacklevel., ./pandas/core/groupby/grouper.py
+pandas.indexers.deprecate_ndim_indexing(): ~helper function to raise the deprecation warning for multi-dimensional indexing on 1d series/index. gh#27125 indexer like idx[:, none] expands dim, but we cannot do that and keep an index, so we currently return ndarray, which is deprecated (deprecation gh#30588)., ./pandas/core/indexers/utils.py
+pandas.indexers.unpack_1tuple(): ~notes ----- the list case is deprecated., ./pandas/core/indexers/utils.py
+pandas.indexes.DatetimeProperties.weekofyear(): ~.. deprecated:: 1.1.0 series.dt.weekofyear and series.dt.week have been deprecated. please use series.dt.isocalendar().week instead., ./pandas/core/indexes/accessors.py
+pandas.indexes.Index: ~see also -------- rangeindex : index implementing a monotonic integer range. categoricalindex : index of :class:`categorical` s. multiindex : a multi-level, or hierarchical index. intervalindex : an index of :class:`interval` s. datetimeindex : index of datetime64 data. timedeltaindex : index of timedelta64 data. periodindex : index of period data. numericindex : index of numpy int/uint/float data. int64index : index of purely int64 labels (deprecated). uint64index : index of purely uint64 labels (deprecated). float64index : index of purely float64 labels (deprecated)., ./pandas/core/indexes/base.py
+pandas.indexes._maybe_cast_data_without_dtype(): ~parameters ---------- subarr : np.ndarray[object] cast_numeric_deprecated : bool, default true whether to issue a futurewarning when inferring numeric dtypes., ./pandas/core/indexes/base.py
+pandas.indexes.Index.copy(): ~ .. deprecated:: 1.2.0 use ``astype`` method instead. names : list-like, optional kept for compatibility with multiindex. should not be used. .. deprecated:: 1.4.0 use ``name`` instead., ./pandas/core/indexes/base.py
+pandas.indexes.Index.to_native_types(): ~.. deprecated:: 1.2.0, ./pandas/core/indexes/base.py
+pandas.indexes.Index.set_names(): @deprecate_nonkeyword_arguments. # names, ./pandas/core/indexes/base.py
+pandas.indexes.Index.drop_duplicates(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/indexes/base.py
+pandas.indexes.Index.set_value(): ~.. deprecated:: 1.0, ./pandas/core/indexes/base.py
+pandas.indexes.Index.slice_indexer(): ~ .. deprecated:: 1.4.0, ./pandas/core/indexes/base.py
+pandas.indexes.Index._maybe_cast_slice_bound(): ~ .. deprecated:: 1.3.0, ./pandas/core/indexes/base.py
+pandas.indexes.Index.get_slice_bound(): ~ .. deprecated:: 1.4.0, ./pandas/core/indexes/base.py
+pandas.indexes.Index.slice_locs(): ~ .. deprecated:: 1.4.0, ./pandas/core/indexes/base.py
+pandas.indexes.date_range(): ~ .. deprecated:: 1.4.0 argument `closed` has been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. inclusive : {"both", "neither", "left", "right"}, default "both" include boundaries; whether to set each bound as closed or open., ./pandas/core/indexes/datetimes.py
+pandas.indexes.bdate_range(): ~ .. deprecated:: 1.4.0 argument `closed` has been deprecated to standardize boundary inputs. use `inclusive` instead, to set each bound as closed or open. inclusive : {"both", "neither", "left", "right"}, default "both" include boundaries; whether to set each bound as closed or open., ./pandas/core/indexes/datetimes.py
+pandas.indexes.MultiIndex.set_levels(): ~ .. deprecated:: 1.2.0 verify_integrity : bool, default true if true, checks that levels and codes are compatible., @deprecate_nonkeyword_arguments. # levels, ./pandas/core/indexes/multi.py
+pandas.indexes.MultiIndex.set_codes(): ~ .. deprecated:: 1.2.0 verify_integrity : bool, default true if true, checks that levels and codes are compatible., @deprecate_nonkeyword_arguments. # codes, ./pandas/core/indexes/multi.py
+pandas.indexes.MultiIndex.copy(): ~ .. deprecated:: 1.2.0 levels : sequence, optional .. deprecated:: 1.2.0 codes : sequence, optional .. deprecated:: 1.2.0 deep : bool, default false name : label kept for compatibility with 1-dimensional index. should not be used., ./pandas/core/indexes/multi.py
+pandas.indexes.MultiIndex.get_slice_bound(): ~ .. deprecated:: 1.4.0, ./pandas/core/indexes/multi.py
+pandas.indexes.MultiIndex.slice_locs(): ~ .. deprecated:: 1.4.0, ./pandas/core/indexes/multi.py
+pandas.indexes.MultiIndex.set_names(): @deprecate_nonkeyword_arguments. # names, ./pandas/core/indexes/multi.py
+pandas.indexes.MultiIndex.drop_duplicates(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/indexes/multi.py
+pandas.indexes.NumericIndex: ~see also -------- index : the base pandas index type. int64index : index of purely int64 labels (deprecated). uint64index : index of purely uint64 labels (deprecated). float64index : index of purely float64 labels (deprecated)., ./pandas/core/indexes/numeric.py
+pandas.indexes.RangeIndex._start(): ~ .. deprecated:: 0.25.0 use ``start`` instead., ./pandas/core/indexes/range.py
+pandas.indexes.RangeIndex._stop(): ~ .. deprecated:: 0.25.0 use ``stop`` instead., ./pandas/core/indexes/range.py
+pandas.indexes.RangeIndex._step(): ~ .. deprecated:: 0.25.0 use ``step`` instead., ./pandas/core/indexes/range.py
+pandas.check_deprecated_indexers(): ~checks if the key is a deprecated indexer., ./pandas/core/indexing.py
+pandas.Resampler.interpolate(): @deprecate_nonkeyword_arguments. # method, ./pandas/core/resample.py
+pandas.reshape.concat(): @deprecate_nonkeyword_arguments. # objs, ./pandas/core/reshape/concat.py
+pandas.reshape.lreshape(): ~ .. deprecated:: 1.0.0, ./pandas/core/reshape/melt.py
+pandas.Series.reset_index(): @deprecate_nonkeyword_arguments. # level, ./pandas/core/series.py
+pandas.Series.drop_duplicates(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/series.py
+pandas.Series.append(): ~.. deprecated:: 1.4.0 use :func:`concat` instead. for further details see :ref:`whatsnew_140.deprecations.frame_series_append`, ./pandas/core/series.py
+pandas.Series.sort_values(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/series.py
+pandas.Series.sort_index(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/series.py
+pandas.Series.set_axis(): @deprecate_nonkeyword_arguments. # labels, ./pandas/core/series.py
+pandas.Series.drop(): @deprecate_nonkeyword_arguments. # labels, ./pandas/core/series.py
+pandas.Series.fillna(): @deprecate_nonkeyword_arguments. # value, ./pandas/core/series.py
+pandas.Series.dropna(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/series.py
+pandas.Series.ffill(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/series.py
+pandas.Series.bfill(): @deprecate_nonkeyword_arguments. # self, ./pandas/core/series.py
+pandas.Series.clip(): @deprecate_nonkeyword_arguments. # upper, ./pandas/core/series.py
+pandas.Series.interpolate(): @deprecate_nonkeyword_arguments. # method, ./pandas/core/series.py
+pandas.Series.where(): @deprecate_nonkeyword_arguments. # other, ./pandas/core/series.py
+pandas.Series.mask(): @deprecate_nonkeyword_arguments. # other, ./pandas/core/series.py
+pandas.lexsort_indexer():  warn - ignore.*SparseArray.*FutureWarning, ./pandas/core/sorting.py
+pandas.strings.StringMethods.capitalize(): @_doc_args. # capitalize, ./pandas/core/strings/accessor.py
+pandas.tools.to_timedelta(): ~ .. deprecated:: 1.2 strings with units 'm', 'y' and 'y' do not represent unambiguous timedelta values and will be removed in a future version, ./pandas/core/tools/timedeltas.py
+pandas.window.ExponentialMovingWindow: ~ .. deprecated:: 1.4.0 if str, the name of the column in the dataframe representing the times., ./pandas/core/window/ewm.py
+pandas.window.Expanding: ~ .. deprecated:: 1.1.0, ./pandas/core/window/expanding.py
+pandas.parse_date_time(): ~.. deprecated:: 1.2, ./pandas/io/date_converters.py
+pandas.parse_date_fields(): ~.. deprecated:: 1.2, ./pandas/io/date_converters.py
+pandas.parse_all_fields(): ~.. deprecated:: 1.2, ./pandas/io/date_converters.py
+pandas.generic_parser(): ~.. deprecated:: 1.2, ./pandas/io/date_converters.py
+pandas.excel.ExcelWriter: ~ .. deprecated:: 1.2.0 .. deprecated:: 1.3.0, ./pandas/io/excel/_base.py
+pandas.excel.read_excel(): @deprecate_nonkeyword_arguments. # sheet_name, ./pandas/io/excel/_base.py
+pandas.excel.combine_kwargs(): ~use of kwargs is deprecated, this function is solely for use in 1.3 and should be removed in 1.4/2.0. also _base.excelwriter.__new__ ensures either engine_kwargs or kwargs must be none or empty respectively. parameters ---------- engine_kwargs: dict kwargs to be passed through to the engine. kwargs: dict kwargs to be psased through to the engine (deprecated), ./pandas/io/excel/_util.py
+pandas.formats.ExcelFormatter.write(): ~ .. deprecated:: 1.2.0, ./pandas/io/formats/excel.py
+pandas.formats.Styler.render(): ~.. deprecated:: 1.4.0 notes ----- this method is deprecated in favour of ``styler.to_html``., ./pandas/io/formats/style.py
+pandas.formats.Styler.where(): ~.. deprecated:: 1.3.0 notes ----- this method is deprecated., ./pandas/io/formats/style.py
+pandas.formats.Styler.set_precision(): ~.. deprecated:: 1.3.0 notes ----- this method is deprecated see `styler.format`., ./pandas/io/formats/style.py
+pandas.formats.Styler.set_na_rep(): ~.. deprecated:: 1.3.0 notes ----- this method is deprecated. see `styler.format()`, ./pandas/io/formats/style.py
+pandas.formats.Styler.hide_index(): ~.. deprecated:: 1.4.0 this method should be replaced by ``hide(axis="index", **kwargs)``, ./pandas/io/formats/style.py
+pandas.formats.Styler.hide_columns(): ~..deprecated:: 1.4.0 this method should be replaced by ``hide(axis="columns", **kwargs)``, ./pandas/io/formats/style.py
+pandas.read_html(): @deprecate_nonkeyword_arguments. # 2.0, ./pandas/io/html.py
+pandas.json.read_json(): ~ .. deprecated:: 1.0.0, @deprecate_nonkeyword_arguments. # path_or_buf, ./pandas/io/json/_json.py
+pandas.parsers.read_csv(): @deprecate_nonkeyword_arguments. # filepath_or_buffer, ./pandas/io/parsers/readers.py
+pandas.parsers.read_table(): @deprecate_nonkeyword_arguments. # filepath_or_buffer, ./pandas/io/parsers/readers.py
+pandas.parsers.read_fwf(): @deprecate_nonkeyword_arguments. # filepath_or_buffer, ./pandas/io/parsers/readers.py
+pandas.HDFStore._validate_format(): ~validate / deprecate formats, ./pandas/io/pytables.py
+pandas._gt14(): ~check if sqlalchemy.__version__ is at least 1.4.0, when several deprecations were made., ./pandas/io/sql.py
+pandas.read_xml(): @deprecate_nonkeyword_arguments. # path_or_buffer, ./pandas/io/xml.py
+pandas.get_offset(): ~.. deprecated:: 1.0.0, ./pandas/tseries/frequencies.py
+pandas.deprecate(): ~return a new function that emits a deprecation warning on use. to use this method for a deprecated function, another function `alternative` with the same signature must exist. the deprecated function will emit a deprecation warning, and in the docstring it will contain the deprecation directive with the provided version so it can be detected for future removal. parameters ---------- name : str name of function to deprecate. alternative : func function to use instead. version : str version of pandas in which the method has been deprecated. alt_name : str, optional name to use in preference of alternative.__name__. klass : warning, default futurewarning stacklevel : int, default 2 msg : str the message to display in the warning. default is '{name} is deprecated. use {alt_name} instead.', ./pandas/util/_decorators.py
+pandas.deprecate_kwarg(): ~decorator to deprecate a keyword argument of a function. parameters ---------- old_arg_name : str name of argument in function to deprecate new_arg_name : str or none name of preferred argument in function. use none to raise warning that ``old_arg_name`` keyword is deprecated. mapping : dict or callable if mapping is present, use it to translate old arguments to new arguments. a callable must do its own value checking; values not found in a dict will be forwarded unchanged. examples -------- the following deprecates 'cols', using 'columns' instead >>> @deprecate_kwarg(old_arg_name='cols', new_arg_name='columns') ... def f(columns=''): ... print(columns) ... >>> f(columns='should work ok') should work ok >>> f(cols='should raise warning') # doctest: +skip futurewarning: cols is deprecated, use columns instead warnings.warn(msg, futurewarning) should raise warning >>> @deprecate_kwarg('old', 'new', {'yes': true, 'no': false}) ... def f(new=false): ... print('yes!' if new else 'no!') ... >>> f(old='yes') # doctest: +skip futurewarning: old='yes' is deprecated, use new=true instead warnings.warn(msg, futurewarning) yes! >>> @deprecate_kwarg(old_arg_name='cols', new_arg_name=none) ... def f(cols='', another_param=''): ... print(cols) ... >>> f(cols='should raise warning') # doctest: +skip futurewarning: the 'cols' keyword is deprecated and will be removed in a future version please takes steps to stop use of 'cols' should raise warning >>> f(another_param='should not raise warning') # doctest: +skip should not raise warning >>> f(cols='should raise warning', another_param='') # doctest: +skip futurewarning: the 'cols' keyword is deprecated and will be removed in a future version please takes steps to stop use of 'cols' should raise warning, ./pandas/util/_decorators.py
+pandas._format_argument_list(): ~convert the allow_args argument (either string or integer) of `deprecate_nonkeyword_arguments` function to a string describing it to be inserted into warning message. parameters ---------- allowed_args : list, tuple or int the `allowed_args` argument for `deprecate_nonkeyword_arguments`, but none value is not allowed., ./pandas/util/_decorators.py
+pandas.future_version_msg(): ~specify which version of pandas the deprecation will take place in., ./pandas/util/_decorators.py
+pandas.deprecate_nonkeyword_arguments(): ~decorator to deprecate a use of non-keyword arguments of a function., ./pandas/util/_decorators.py
+pandas.safe_import():  warn - ignoreaiohttp.*decorator is deprecated since Python 3.8.*DeprecationWarning warn - ignorefastparquet.*Int64Index.*FutureWarning, ./pandas/util/_test_decorators.py
+pandas.deprecate_option(): ~mark option `key` as deprecated, if code attempts to access this option, a warning will be produced, using `msg` if given, or a default message if not. if `rkey` is given, any access to the key will be re-routed to `rkey`. neither the existence of `key` nor that if `rkey` is checked. if they do not exist, any subsequence access will fail as usual, after the deprecation warning is given. parameters ---------- key : str name of the option to be deprecated. must be a fully-qualified option name (e.g "x.y.z.rkey"). msg : str, optional warning message to output when the key is referenced. if no message is given a default message will be emitted. rkey : str, optional name of an option to reroute access to. if specified, any referenced `key` will be re-routed to `rkey` including set/get/reset. rkey must be a fully-qualified option name (e.g "x.y.z.rkey"). used by the default message if no `msg` is specified. removal_ver : str, optional specifies the version in which this option will be removed. used by the default message if no `msg` is specified. raises ------ optionerror if the specified key has already been deprecated., ./pandas/_config/config.py
+pandas._is_deprecated(): ~returns true if the given option has been deprecated, ./pandas/_config/config.py
+pandas._get_deprecated_option(): ~retrieves the metadata for a deprecated option, if `key` is deprecated. returns ------- deprecatedoption (namedtuple) if key is deprecated, none otherwise, ./pandas/_config/config.py
+pandas._get_registered_option(): ~returns ------- registeredoption (namedtuple) if key is deprecated, none otherwise, ./pandas/_config/config.py
+pandas._translate_key(): ~if key id deprecated and a replacement key defined, will return the replacement key, otherwise returns `key` as - is, ./pandas/_config/config.py
+pandas._warn_if_deprecated(): ~checks if `key` is a deprecated option and if so, prints a warning. returns ------- bool - true if `key` is deprecated, false otherwise., ./pandas/_config/config.py
+pandas.assert_almost_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. rtol : float, default 1e-5 relative tolerance., ./pandas/_testing/asserters.py
+pandas._get_tol_from_less_precise(): ~return the tolerance equivalent to the deprecated `check_less_precise` parameter., ./pandas/_testing/asserters.py
+pandas.assert_index_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_exact : bool, default true whether to compare number exactly. check_categorical : bool, default true whether to compare internal categorical exactly. check_order : bool, default true whether to compare the order of index entries as well as their values. if true, both indexes must contain the same elements, in the same order. if false, both indexes must contain the same elements, but in any order., ./pandas/_testing/asserters.py
+pandas.assert_extension_array_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_exact : bool, default false whether to compare number exactly. rtol : float, default 1e-5 relative tolerance. only used when check_exact is false., ./pandas/_testing/asserters.py
+pandas.assert_series_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_names : bool, default true whether to check the series and index names attribute. check_exact : bool, default false whether to compare number exactly. check_datetimelike_compat : bool, default false compare datetime-like which is comparable ignoring dtype. check_categorical : bool, default true whether to compare internal categorical exactly. check_category_order : bool, default true whether to compare category order of internal categoricals., ./pandas/_testing/asserters.py
+pandas.assert_frame_equal(): ~ .. deprecated:: 1.1.0 use `rtol` and `atol` instead to define relative/absolute tolerance, respectively. similar to :func:`math.isclose`. check_names : bool, default true whether to check that the `names` attribute for both the `index` and `column` attributes of the dataframe is identical. by_blocks : bool, default false specify how to compare internal data. if false, compare by columns. if true, compare by blocks. check_exact : bool, default false whether to compare number exactly. check_datetimelike_compat : bool, default false compare datetime-like which is comparable ignoring dtype. check_categorical : bool, default true whether to compare internal categorical exactly. check_like : bool, default false if true, ignore the order of index & columns. note: index labels must match their respective rows (same as in columns) - same labels must be with the same data. check_freq : bool, default true whether to check the `freq` attribute on a datetimeindex or timedeltaindex., ./pandas/_testing/asserters.py
+pandas._assert_caught_expected_warning():  warn - DeprecationWarning, ./pandas/_testing/_warnings.py
